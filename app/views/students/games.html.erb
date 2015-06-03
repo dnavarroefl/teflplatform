@@ -1,5 +1,6 @@
 
 <h3> Matching Game </h3>
+
 <img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">
 
 <p> Match the verb to the associated "words".</p>
@@ -7,7 +8,7 @@
 		<li> PLAY... football / ball / dead / ground / around / chess / music / fight / hockey / the trumpet / the piano.</li>
 	</ul>
  
- <script type="text/javascript">
+<script type="text/javascript">
 
 	var user = {}
 	var responses = [] 
@@ -34,8 +35,7 @@
 			     	case 'the trumpet':
 			     	case 'the piano':
 			    alert('Correct answer!');
-			    prompt('How many word matches can you find with the verb PLAY? Enter one of the words from the list: "football","ball", "dead", "ground", "around", "chess", "music", "fight", "hockey", "the trumpet", "the piano".')
-			    return matchGame(); 
+//Necesito controlar el flujo para contabilizar los puntos por respuesta correcta y restar por error. Tendríamos 11 intentos, una por palabra.
 			    break;
 			    	case 'dead':
 			    	case 'fight':
@@ -47,7 +47,34 @@
 		  responses.push(firstMatch);
 		}
 
-	matchGame();     
+	matchGame();   
+
+/* Tenemos que controlar el desarrollo del juego con 11 intentos por jugador y el  recuento de los puntos por aciertos y errores.
+
+*/
+	function evaluate(responses) {
+
+		var total1 = []
+		var total2 = []
+
+		total1.push(responses);
+		total2.push(responses);
+
+		user = total1;
+		user = total2;
+
+		showResults();
+	}
+
+	function showResults(responses) {
+
+		alert('You wrote the following words:' + user);
+		}
+
+	alert('Correct matches: PLAY + football, ball, ground, around, chess, music, fight, hockey, the trumpet, the piano');
+
+	evaluate([responses]);
+	
  </script>
 
 <%= link_to 'Home', root_path %>
