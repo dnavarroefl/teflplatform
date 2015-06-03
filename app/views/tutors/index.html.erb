@@ -5,11 +5,11 @@
 <% @students.each do |student| %> 
 
 <ul>
-	Name: <%= student.name %>, 
-	Age: <%= student.age %>,
-	Level: <%= student.level %>,
-	Progress: <%= student.progress %>,
-	Score: <%= student.score %>
+	<strong>Name:</strong> <%= student.name %><br>
+	<strong>Age:</strong>  <%= student.age %><br>
+	<strong>Level:</strong>  <%= student.level %><br>
+	<strong>Progress:</strong>  <%= student.progress %><br>
+	<strong>Score:</strong>  <%= student.score %>
 </ul>
 <% end %>
 </p>
@@ -19,9 +19,9 @@
 <% @comments.each do |comment| %> 
 
 <ul>
-	Title: <%= comment.title %>, 
-	Name: <%= comment.name %>,
-	Text: <%= comment.text %>,
+	<strong>Title:</strong> <%= comment.title %><br> 
+	<strong>Name:</strong> <%= comment.name %><br>
+	<strong>Text:</strong> <%= comment.text %>
 </ul>
 <% end %>
 </p>
@@ -32,6 +32,8 @@
 <ul>
 	<strong>Title:</strong>
 	  <%= post.title %><br>
+	<strong>Name:</strong>
+	  <%= post.name %><br>
 	<strong>Text:</strong>
 	  <%= post.text %>
 	
