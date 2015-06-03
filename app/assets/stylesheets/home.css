@@ -7,7 +7,7 @@ h1 {
 
 body { 
    font-family: verdana; 
-   margin-left: 50px;
+   margin-left: 100px;
    margin-top: 50px; 
 } 
 
@@ -15,6 +15,27 @@ img {
    margin-top: 10px;
 }
 
+h3 {
+   margin-top: 40px
+}
+
 #like-button {
    margin-left: 300px; 
+}
+
+div#posts-titles {
+   margin: 10px
+}
+
+div#posts-content {
+   margin: 50px;
+}
+
+td {
+   background-color: grey; 
+   padding: 15px;
+}
+
+nav{ 
+   display: inline-block;
 }

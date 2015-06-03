@@ -1,20 +1,25 @@
 <h3> Recent Posts </h3>
 
+<div id="posts-titles">
 <table> 
 	<tr>
     <th>Name</th>
 		<th>Title</th>
 		<th>Text</th>
 	</tr>
+</div>
 
+<div id="posts-content">
 	<% @posts.each do |post| %> 
 	<tr>
     <td><%= post.name %></td>
 		<td><%= post.title %></td>
 		<td><%= post.text %></td>
 	</tr>
+
 	<% end %>
 </table><br>
+</div>
 
   <%= form_for :post, url: posts_path do |f| %>
 
