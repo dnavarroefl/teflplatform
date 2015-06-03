@@ -1,13 +1,15 @@
-<h1> Recent Posts </h1>
+<h3> Recent Posts </h3>
 
 <table> 
 	<tr>
+    <th>Name</th>
 		<th>Title</th>
 		<th>Text</th>
 	</tr>
 
 	<% @posts.each do |post| %> 
 	<tr>
+    <td><%= post.name %></td>
 		<td><%= post.title %></td>
 		<td><%= post.text %></td>
 	</tr>
