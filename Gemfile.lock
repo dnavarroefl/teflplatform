@@ -156,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   dropbox-explorer
+  dropbox-sdk
   duolingo
   faraday
   jbuilder (~> 2.0)

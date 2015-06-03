@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dropbox-sdk'
 gem 'dropbox-explorer'
 gem 'duolingo'
 gem 'faraday'
