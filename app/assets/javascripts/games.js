@@ -14,14 +14,16 @@ function guessPlay() {
 	if (firstMatch === 'football') {
 		firstMatch = true
 		alert('Right match!');
-	} else if (firstMatch) === 'fight');
+	} else if (firstMatch) === 'fight') {
 		firstMatch = false
 		alert('Wrong match!');
-	}	else
+	}	else {
 		alert('Please enter a valid word.');
 		return firstMatch;
 	responses.push(firstMatch);
 }
+
+guessPlay(); 
 
 var play
 play = ["football","ball", "dead", "ground", "around", "chess", "music", "fight", "hockey", "the trumpet", "the piano"];
@@ -31,5 +33,7 @@ fly = ["gonna", "low", "plane", "plane", "around", "away", "fly", "boy", "a kite
 
 var run 
 run = ["paint", "ball", "way", "down", "away", "a light", "water", "the office", "down the road", "the piano"];
+
+console.log('Test Mode');
 
 

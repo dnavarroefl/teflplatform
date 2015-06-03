@@ -1,23 +1,24 @@
-<h1> TEFL Platform for tutors and students </h1>
+<h1> TEFL Platform for 
+	<a href src="localhost:3000/tutor">tutors</a> and <a href src="localhost:3000/students">students</a> </h1>
 
 <nav id="nav_bar">
-	<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="26" width="26"> 
+	<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="46" width="46"> 
 <%= link_to 'All students', students_path %>
 
-	<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="26" width="26">
+	<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46">
 <%= link_to 'Contact', controller: "students", action: "contact" %>
 
-	<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="26" width="26">
+	<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">
 <%= link_to 'Games', controller: "students", action: "games" %>
 
 	<img id="tools" src="http://icons.iconarchive.
-	com/icons/martz90/hex/256/duolingo-icon.png" height="26" width="26">
+	com/icons/martz90/hex/256/duolingo-icon.png" height="46" width="46">
 <%= link_to 'Tools', controller: "students", action:"tools" %>
 
-	<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="26" width="26">
+	<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="46" width="46">
 <%= link_to 'Media', controller: "students", action: "media" %>
 
-	<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="26" width="26">
+	<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="46" width="46">
 <%= link_to 'Posts', controller: "posts", action: "index" %>
 </nav>
 

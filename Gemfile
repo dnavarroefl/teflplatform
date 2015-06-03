@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dropbox-explorer'
 gem 'duolingo'
 gem 'faraday'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
