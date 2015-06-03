@@ -1,0 +1,39 @@
+<h1> Recent Posts </h1>
+
+<table> 
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+
+	<% @posts.each do |post| %> 
+	<tr>
+		<td><%= post.title %></td>
+		<td><%= post.text %></td>
+	</tr>
+	<% end %>
+</table><br>
+
+  <%= form_for :post, url: posts_path do |f| %>
+
+   <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+   
+    <p>
+      <%= f.label :text %><br>
+      <%= f.text_area :text %>
+    </p>
+   
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<%= link_to 'Home', root_path %>

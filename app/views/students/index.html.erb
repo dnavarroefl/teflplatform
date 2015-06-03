@@ -1,0 +1,27 @@
+<h1> Students Index </h1>
+
+<%= link_to 'Home', root_path %>
+
+<div ="students_details">
+	<p> 
+		<% @students.each do |student| %>
+	<table>
+	<tr>
+		<img src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="26" width="26"><br>
+		<b><%= student.name %></b><br>
+
+		Email: <%= student.email %><br>
+		Age: <%= student.age %><br>
+		Level: <%= student.level %><br>
+		Progress: <%= student.progress %><br>
+		Score: <%= student.score %><br>
+		Comment: <%= student.comment %><br>
+	</tr>
+	</table><br>
+
+	<% end %> 
+	</p>
+</div>
+
+
+

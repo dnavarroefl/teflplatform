@@ -1,0 +1,20 @@
+
+h1 { 
+   padding:10px; 
+   font-family: georgia; 
+   font-size: 25px;
+} 
+
+body { 
+   font-family: verdana; 
+   margin-left: 50px;
+   margin-top: 50px; 
+} 
+
+img {
+   margin-top: 10px;
+}
+
+#like-button {
+   margin-left: 300px; 
+}

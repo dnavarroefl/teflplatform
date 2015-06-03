@@ -1,0 +1,41 @@
+<h1> TEFL Platform for tutors and students </h1>
+
+<nav id="nav_bar">
+	<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="26" width="26"> 
+<%= link_to 'All students', students_path %>
+
+	<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="26" width="26">
+<%= link_to 'Contact', controller: "students", action: "contact" %>
+
+	<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="26" width="26">
+<%= link_to 'Games', controller: "students", action: "games" %>
+
+	<img id="tools" src="http://icons.iconarchive.
+	com/icons/martz90/hex/256/duolingo-icon.png" height="26" width="26">
+<%= link_to 'Tools', controller: "students", action:"tools" %>
+
+	<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="26" width="26">
+<%= link_to 'Media', controller: "students", action: "media" %>
+
+	<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="26" width="26">
+<%= link_to 'Posts', controller: "posts", action: "index" %>
+</nav>
+
+<h3>Welcome back!</h3>
+
+<h3> Latest posts: </h3>
+
+<p>
+	<% @posts.each do |post| %> 
+<ul>
+	Title: <%= post.title %><br> 
+	Name: <%= post.name %><br>
+	Text: <%= post.text %><br>
+</ul>
+	<button type='button' id='like-button'> Like </button><br>
+</p>
+<% end %>
+
+
+
+

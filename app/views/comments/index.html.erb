@@ -1,0 +1,15 @@
+<h1> Students' Wall </h1>
+
+<p>
+	<% @comments.each do |comment| %> 
+<ul>
+	Title: <%= comment.title %><br> 
+	Name: <%= comment.name %><br>
+	Text: <%= comment.text %><br>
+</ul>
+	<button type='button' id='like-button'> Like </button><br>
+</p>
+<% end %>
+
+
+<%= link_to 'Home', root_path %>

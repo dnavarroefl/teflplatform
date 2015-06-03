@@ -1,0 +1,42 @@
+<h1> Tutor's Index </h1>
+
+<p>
+<b>Students:</b> 
+<% @students.each do |student| %> 
+
+<ul>
+	Name: <%= student.name %>, 
+	Age: <%= student.age %>,
+	Level: <%= student.level %>,
+	Progress: <%= student.progress %>,
+	Score: <%= student.score %>
+</ul>
+<% end %>
+</p>
+
+<p>
+<b>Feedback:</b> 
+<% @comments.each do |comment| %> 
+
+<ul>
+	Title: <%= comment.title %>, 
+	Name: <%= comment.name %>,
+	Text: <%= comment.text %>,
+</ul>
+<% end %>
+</p>
+
+<p>
+<b>Posts:</b>
+	<% @posts.each do |post| %> 
+<ul>
+	<strong>Title:</strong>
+	  <%= post.title %><br>
+	<strong>Text:</strong>
+	  <%= post.text %>
+	
+</ul>
+	<% end %>
+</p>
+
+<%= link_to 'Home', root_path %>
