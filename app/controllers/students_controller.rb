@@ -3,6 +3,7 @@ class StudentsController < ApplicationController
 		@students = Student.all
 		@tutors = Tutor.all
 		@posts = Post.all
+		@comments = Comment.all
 	end 
 
 	def index

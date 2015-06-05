@@ -1,76 +1,37 @@
-<h3> Keep learning with Duolingo! </h3>
-<div id="duolingo_user">
-	<img src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="46" width="46">
-	<p>
-		An amazing and interactive way of learning English.
-	</p>
-</div>
+<h2> These two APPs can take your English learning to the next level! </h2>
 
-<div id="dropbox_user">
-	<h3> Browse our Dropbox folder </h3>
-	<img src="http://icons.iconarchive.com/icons/martz90/hex/256/dropbox-icon.png" height="46" width="46">
-	<p>
-		One of the best cloud servers to share our content.
-	</p>
-</div>
+    <div id="duolingo container">
+        <table>
+            <th><img src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="46" width="46">An amazing and interactive way of learning English.</th>
+            <tr>
+                <td>Keep learning with Duolingo!</td>
+            </tr>
+        </table>
+    </div>
 
-<script type="text/javascript">
 
-	var button = Dropbox.createChooseButton(options);
-	document.getElementById("container").appendChild(button);
+    <div id="dropbox_container">
+        <table>
+            <th><img src="http://icons.iconarchive.com/icons/martz90/hex/256/dropbox-icon.png" height="46" width="46">Browse our Dropbox folder</th>
+                <tr>
+                    <td>One of the best cloud servers to share our content.</td>
+                </tr>
+                <tr> 
+                    <th><%= link_to 'Upload your file to dropbox', controller: "dropbox", action: "main" %></th>
+                <tr>
+                    <th><%= link_to 'Authenticate', controller: "dropbox", action: "auth_start" %></th>
+                </tr>
+        </table>
 
-	options = {
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ps8sv6wjj5v125t">
+            var button = Dropbox.createChooseButton(options);
+            document.getElementById("container").appendChild(button);
+        </script>
 
-    // Required. Called when a user selects an item in the Chooser.
-    success: function(files) {
-        alert("Here's the file link: " + files[0].link)
-    },
-
-    // Optional. Called when the user closes the dialog without selecting a file
-    // and does not include any parameters.
-    cancel: function() {
-
-    },
-
-    // Optional. "preview" (default) is a preview link to the document for sharing,
-    // "direct" is an expiring link to download the contents of the file. For more
-    // information about link types, see Link types below.
-    linkType: "preview", // or "direct"
-
-    // Optional. A value of false (default) limits selection to a single file, while
-    // true enables multiple file selection.
-    multiselect: false, // or true
-
-    // Optional. This is a list of file extensions. If specified, the user will
-    // only be able to select files with these extensions. You may also specify
-    // file types, such as "video" or "images" in the list. For more information,
-    // see File types below. By default, all extensions are allowed.
-    extensions: ['.pdf', '.doc', '.docx'],
-};
-
-	file = {
-
-    // Name of the file.
-    name: "teachlearn.pdf",
-
-    // URL to access the file, which varies depending on the linkType specified when the
-    // Chooser was triggered.
-    link: "https://www.dropbox.com/s/9ijccxh147g2m3p/teachlearn.pdf?dl=0",
-
-    // Size of the file in bytes.
-    bytes: 464,
-
-    // URL to a 64x64px icon for the file based on the file's extension.
-    icon: "",
-
-    // A thumbnail URL generated when the user selects images and videos.
-    // If the user didn't select an image or video, no thumbnail will be included.
-    thumbnailLink: "",
-};
-
-</script>
-
-<%= link_to 'Back', root_path%>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ps8sv6wjj5v125t"></script>
+        <a href="https://www.dropbox.com/s/njx4ymzqus7ejgs/gse_multipart44942.jpg?dl=0" class="dropbox-saver"></a><br>
+        
+<%= link_to 'Back',root_path %>
 
 
 

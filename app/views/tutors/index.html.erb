@@ -1,44 +1,73 @@
 <h1> Tutor's Index </h1>
 
-<p>
-<b>Students:</b> 
-<% @students.each do |student| %> 
+<h3>Students</h3>
+<div id="students-titles">
+<table> 
+	<tr>
+		<th>Name</th>
+    	<th>Age</th>
+		<th>Level</th>
+		<th>Progress</th>
+		<th>Score</th>
+	</tr>
+</div>
 
-<ul>
-	<strong>Name:</strong> <%= student.name %><br>
-	<strong>Age:</strong>  <%= student.age %><br>
-	<strong>Level:</strong>  <%= student.level %><br>
-	<strong>Progress:</strong>  <%= student.progress %><br>
-	<strong>Score:</strong>  <%= student.score %>
-</ul>
-<% end %>
-</p>
+<div id="students-content">
+	<% @students.each do |student| %> 
+	<tr>
+		<td><%= student.name %></td>
+    	<td><%= student.age %></td>
+		<td><%= student.level %></td>
+		<td><%= student.progress %></td>
+		<td><%= student.score %></td>
+	</tr>
 
-<p>
-<b>Feedback:</b> 
-<% @comments.each do |comment| %> 
-
-<ul>
-	<strong>Title:</strong> <%= comment.title %><br> 
-	<strong>Name:</strong> <%= comment.name %><br>
-	<strong>Text:</strong> <%= comment.text %>
-</ul>
-<% end %>
-</p>
-
-<p>
-<b>Posts:</b>
-	<% @posts.each do |post| %> 
-<ul>
-	<strong>Title:</strong>
-	  <%= post.title %><br>
-	<strong>Name:</strong>
-	  <%= post.name %><br>
-	<strong>Text:</strong>
-	  <%= post.text %>
-	
-</ul>
 	<% end %>
-</p>
+</table><br>
+</div>
+
+<h3>Feedback</h3>
+<div id="comments-titles">
+<table> 
+	<tr>
+    <th>Name</th>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+</div>
+
+<div id="comments-content">
+	<% @comments.each do |comment| %> 
+	<tr>
+    <td><%= comment.name %></td>
+		<td><%= comment.title %></td>
+		<td><%= comment.text %></td>
+	</tr>
+
+	<% end %>
+</table><br>
+</div>
+
+<h3>Posts</h3>
+<div id="posts-titles">
+<table> 
+	<tr>
+    	<th>Name</th>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+</div>
+
+<div id="posts-content">
+	<% @posts.each do |post| %> 
+	<tr>
+    	<td><%= post.name %></td>
+		<td><%= post.title %></td>
+		<td><%= post.text %></td>
+	</tr>
+
+	<% end %>
+</table><br>
+</div>
 
 <%= link_to 'Home', root_path %>
