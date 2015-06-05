@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   get '/tutor' => 'tutors#index'
 
+  get  "dropbox/main"
+  get  "dropbox/auth_start"
+  get  "dropbox/auth_finish"
+       
+  post "dropbox/upload"
+
   post 'students/new' => 'students#create'
   post 'posts/new' => 'posts#create'
   post 'comments/new' => 'comments#create'
