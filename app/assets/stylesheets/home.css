@@ -1,7 +1,7 @@
 
 h1 { 
    padding:10px; 
-   font-family: georgia; 
+   font-family: verdana; 
    font-size: 25px;
 } 
 
@@ -12,7 +12,7 @@ body {
 } 
 
 img {
-   margin-top: 10px;
+   margin-top: px;
 }
 
 h3 {
@@ -20,7 +20,8 @@ h3 {
 }
 
 #like-button {
-   margin-left: 300px; 
+   margin-left: 200px; 
+   box-shadow: 0 0 1em blue;
 }
 
 div#posts-titles {
@@ -34,6 +35,11 @@ div#posts-content {
 td {
    background-color: grey; 
    padding: 15px;
+}
+
+#nav_bar > a {
+   color: black;
+   font-size: 14px;
 }
 
 nav{ 

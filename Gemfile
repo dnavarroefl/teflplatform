@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'oauth2'
 gem 'dropbox-sdk'
 gem 'dropbox-explorer'
 gem 'duolingo'
