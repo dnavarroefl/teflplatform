@@ -87,3 +87,17 @@ nav{
 div#back_link {
    text-align: center;
 }
+
+div#word-list {
+   margin: 10px;
+  
+}
+
+td#doRight,td#doWrong {
+   padding: 20px; 
+   font-size: 16px;
+}
+
+div#home-link {
+   margin-left: 50%;
+}

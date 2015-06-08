@@ -1,4 +1,13 @@
+$('td#doRight').on('click', function() {
+	alert('Correct!');
+});
 
+$('td#doWrong').on('click', function() {
+	alert('Wrong!');
+});
+
+
+/*
 	var user = {}
 	var responses = [] 
 
@@ -38,9 +47,6 @@
 
 	matchGame();   
 
-/* Tenemos que controlar el desarrollo del juego con 11 intentos por jugador y el  recuento de los puntos por aciertos y errores.
-
-*/
 	function evaluate(responses) {
 
 		var total1 = []

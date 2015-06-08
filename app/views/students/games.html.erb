@@ -1,13 +1,42 @@
 
-<h3> Matching Game </h3>
+<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46"><h3> Matching Game </h3>
 
-<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">
+<p id="guide"> Click on the words associated to the verb PLAY.</p>
+		
 
-<p> Match the verb to the associated "words".</p>
-	<ul> 
-		<li> PLAY... football / ball / dead / ground / around / chess / music / fight / hockey / the trumpet / the piano.</li>
-	</ul>
+<div id="word-list">
+	<table>	
+		<th><strong> PLAY </strong></th>
+		<tr>
+			<td id="doRight"> football </td> 
+			<td id="doRight">ball </td> 
+			<td id="doWrong">dead </td>
+			<td id="doRight">ground </td>
+			<td id="doRight">around </td>
+			<td id="doRight">chess </td>
+			<td id="doRight">music </td>
+			<td id="doWrong">fight </td>
+			<td id="doRight">hockey </td>
+			<td id="doRight">the trumpet </td>
+			<td id="doRight">the piano </td>
+		</tr>
+	</table>
+</div>
 
-<script src="games.js" type="text/javascript"></script>
+<script type="text/javascript">
 
+$('td#doRight').on('click', function() {
+	alert('Correct!');
+});
+
+$('td#doWrong').on('click', function() {
+	alert('Wrong!');
+});
+
+</script>
+
+<div id="home-link">
 <%= link_to 'Home', root_path %>
+</div>
+
+
