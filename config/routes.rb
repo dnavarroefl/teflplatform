@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get  "dropbox/main"
   get  "dropbox/auth_start"
   get  "dropbox/auth_finish"
-       
+     
   post "dropbox/upload"
+
+  get "duolingo/dashboard" => redirect("https://dashboard.duolingo.com/")
 
   post 'students/new' => 'students#create'
   post 'posts/new' => 'posts#create'
