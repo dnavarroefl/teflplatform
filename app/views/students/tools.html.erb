@@ -1,37 +1,35 @@
-<h2> These two APPs can take your English learning to the next level! </h2>
+<h3 id="tools-title"> These two APPs can take your English learning to the next level! </h3>
 
-    <div id="duolingo container">
-        <table>
-            <th><img src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="46" width="46">An amazing and interactive way of learning English.</th>
-            <tr>
-                <td>Keep learning with Duolingo!</td>
-            </tr>
-        </table>
+<img id="duolingo-logo" src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="46" width="46">
+    
+        <div id="duolingo_container">
+            <p>An amazing and interactive way of learning English.<p> Join our <b>Duolingo Dashboard!</b> </p>
+            <a href="https://www.duolingo.com/o$o=deivyemcee@hotmail.com&s=TEFL%20Platform">Join!</a>
+
+            <p>See your classmates' progress at Duolingo: </p>
+            <a href="/duolingo/dashboard">Dashboard</a>
     </div>
 
 
+<img id="dropbox-logo" src="http://icons.iconarchive.com/icons/martz90/hex/256/dropbox-icon.png" height="46" width="46">
+    
     <div id="dropbox_container">
-        <table>
-            <th><img src="http://icons.iconarchive.com/icons/martz90/hex/256/dropbox-icon.png" height="46" width="46">Browse our Dropbox folder</th>
-                <tr>
-                    <td>One of the best cloud servers to share our content.</td>
-                </tr>
-                <tr> 
-                    <th><%= link_to 'Upload your file to dropbox', controller: "dropbox", action: "main" %></th>
-                <tr>
-                    <th><%= link_to 'Authenticate', controller: "dropbox", action: "auth_start" %></th>
-                </tr>
-        </table>
+            <p>Browse our Dropbox folder.</p>
+            <%= link_to 'Authenticate', controller: "dropbox", action: "auth_start" %>
+              
+            <p>One of the best cloud servers to share our content.</p>
+                
+            <%= link_to 'Upload your file to dropbox', controller: "dropbox", action: "main" %><br>
 
-        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ps8sv6wjj5v125t">
-            var button = Dropbox.createChooseButton(options);
-            document.getElementById("container").appendChild(button);
-        </script>
+        <script src="https://www.dropbox.com/static/api/2/dropins.js" type="text/javascript" id="dropboxjs" data-app-key="ps8sv6wjj5v125t"></script>
 
-        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ps8sv6wjj5v125t"></script>
-        <a href="https://www.dropbox.com/s/njx4ymzqus7ejgs/gse_multipart44942.jpg?dl=0" class="dropbox-saver"></a><br>
+        <!--"https://www.dropbox.com/static/api/2/dropins.js"-->
+
+        <p> We strongly recommend <b>'WE TEACH. WE LEARN'</b> as a guide to make your classes <b>interactive</b> and <b>learner-centered</b>.</p>
+        <a href src="https://www.dropbox.com/home/TEFL?preview=teachlearn.pdf" class="dropbox-saver">Preview/download.</a><br>
+    </div>
         
-<%= link_to 'Back',root_path %>
+<div id="back_link"><%= link_to 'Back',root_path %></div>
 
 
 

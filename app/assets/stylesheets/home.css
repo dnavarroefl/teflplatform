@@ -1,19 +1,18 @@
 
-h1 { 
-   padding:10px; 
+h1, div#motto {  
+   padding:20px; 
    font-family: verdana; 
    font-size: 20px;
 } 
 
 body { 
    font-family: verdana; 
-   margin-left: 100px;
-   margin-top: 50px; 
 } 
 
-img {
-   margin-top: 10px;
- 
+nav > img{
+   margin-top: 20px;
+   margin-bottom: -10px; 
+   margin-left: 10px;
 }
 
 h3 {
@@ -31,6 +30,34 @@ div#posts-titles {
 
 div#posts-content {
    margin: 10px;
+}
+
+h3#tools-title {
+   text-align: center;    
+}
+
+img#duolingo-logo {
+   margin-left: 50%; 
+   float: center; 
+}
+
+img#dropbox-logo {
+  margin-left: 50%; 
+  float: center; 
+}
+
+div#duolingo_container  {
+   text-align: center; 
+   margin: 10px;
+   box-shadow: 0 0 2em green;
+   padding: 25px;   
+}
+
+div#dropbox_container  {
+   text-align: center; 
+   margin: 10px;
+   box-shadow: 0 0 2em blue;
+   padding: 25px; 
 }
 
 th {
@@ -55,4 +82,8 @@ tbody {
 
 nav{ 
    display: inline-block;
+}
+
+div#back_link {
+   text-align: center;
 }

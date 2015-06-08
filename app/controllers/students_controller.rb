@@ -13,13 +13,13 @@ class StudentsController < ApplicationController
 
 	def show
 		@student = Student.find params[:id]
-		@tutor = Tutor.fin params[:id]
+		@tutor = Tutor.find params[:id]
 	end 
 
 	def create 
 		@student = Student.new student_params
 		@student.save
-		redirect_to 'students_`path'
+		redirect_to 'students_path'
 	end 
 
 	def contact
