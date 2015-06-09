@@ -1,4 +1,5 @@
 
+	
 	$('td#doRight1').on('click', function() {
 		alert('Correct!');
 	});
@@ -84,11 +85,11 @@
 	});
 
 	$('td#doWrong1').on('click', function() {
-		$('td#doWrong1').css('background-color', 'red');
+		$('td#doWrong1').css('background-color', '#D11B1B');
 	});
 
 	$('td#doWrong2').on('click', function() {
-		$('td#doWrong2').css('background-color', 'red');
+		$('td#doWrong2').css('background-color', '#D11B1B');
 	});
 
 /*

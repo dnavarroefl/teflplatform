@@ -7,10 +7,13 @@
 		</div>
 	</div>
 
+	<hr>
+
 	<nav id="nav_bar">
 			
+			<span id="nav_bar">
 					<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
-					<%= link_to 'All students', students_path %>
+					<%= link_to 'Students', students_path %>
 
 					<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
 				<%= link_to 'Contact', controller: "students", action: "contact" %>
@@ -27,11 +30,14 @@
 
 					<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
 				<%= link_to 'Posts', controller: "posts", action: "index" %>
+			</span>
 	</nav>
+
+	<hr>
 
 <h3 id="welcome">Welcome back!</h3>
 
-<h3> Latest posts: </h3>
+<h3 id="latest_posts"> Latest posts: </h3>
 	<% @posts.each do |post| %> 
 	<table id="table_posts"> 
 		<div id="posts-titles">
@@ -57,7 +63,7 @@
 <% end %>
 
 <div id="comments_home">
-	<h3>Latest comments</h3>
+	<h3 id="latest_feedback">Latest feedback</h3>
 		<% @comments.each do |comment| %> 
 		<table width: "250px" height: "250px" id="table_comments">
 			<tr>

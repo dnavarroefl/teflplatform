@@ -1,29 +1,44 @@
-<h2> Contact your tutor: </h2>
+<span id="contact-tutor-header">
+  <h3 id="title-tutor"> Contact your tutor: </h3>
+  <img id= "contact-tutor" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46">
+</span>
 
-<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46">
+<hr>
+
+<%= link_to 'Home', root_path %>
+
+<hr>
 
 <% @tutors.each do |tutor| %>
 <p>
-	<table>
+	<table id="tutor-table">
 		<td><%= tutor.name %></td>
 		<td>Email: <%= tutor.email %></td>
 	</table>
 <% end %>
 
-<%= form_for :comment, url: comments_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<table id="tutor-feedback">
 
-<%= link_to 'Home', root_path %>
+  <th> Send feedback: </th>
+  <tr>
+    <td>
+      <%= form_for :comment, url: comments_path do |f| %>
+        <p>
+          <%= f.label :name %><br>
+          <%= f.text_field :name %>
+        </p>
+
+      <p>
+        <%= f.label :text %><br>
+        <%= f.text_area :text %>
+      </p>
+
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+
