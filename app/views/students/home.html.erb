@@ -1,36 +1,39 @@
 <!-- Incluir logo de la plataforma <a href src="/tefl_logo.jpg">-->
 	
-	<h1> TEFL Platform for tutors & students </h1>
+	<div id="home-header">
+		<h1> TEFL Platform for tutors & students </h1>
 
-	<div id="motto"><p> Educative platform for students and tutors with the aim of fostering English learning. </p>
+		<div id="motto"><p> Educative platform for students and tutors with the aim of fostering English learning. </p>
+		</div>
 	</div>
 
 	<nav id="nav_bar">
-				<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="26" width="26"> 
-			<%= link_to 'All students', students_path %>
+			
+					<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
+					<%= link_to 'All students', students_path %>
 
-				<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="26" width="26">
-			<%= link_to 'Contact', controller: "students", action: "contact" %>
+					<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
+				<%= link_to 'Contact', controller: "students", action: "contact" %>
 
-				<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="26" width="26">
-			<%= link_to 'Games', controller: "students", action: "games" %>
+					<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
+				<%= link_to 'Games', controller: "students", action: "games" %>
 
-				<img id="tools" src="http://icons.iconarchive.
-				com/icons/martz90/hex/256/duolingo-icon.png" height="26" width="26">
-			<%= link_to 'Tools', controller: "students", action:"tools" %>
+					<img id="tools" src="http://icons.iconarchive.
+					com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
+				<%= link_to 'Tools', controller: "students", action:"tools" %>
 
-				<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="26" width="26">
-			<%= link_to 'Media', controller: "students", action: "media" %>
+					<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
+				<%= link_to 'Media', controller: "students", action: "media" %>
 
-				<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="26" width="26">
-			<%= link_to 'Posts', controller: "posts", action: "index" %>
+					<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
+				<%= link_to 'Posts', controller: "posts", action: "index" %>
 	</nav>
 
-<h3>Welcome back!</h3>
+<h3 id="welcome">Welcome back!</h3>
 
 <h3> Latest posts: </h3>
 	<% @posts.each do |post| %> 
-	<table> 
+	<table id="table_posts"> 
 		<div id="posts-titles">
 			<tr>
 		    	<th>Title</th>
@@ -38,36 +41,50 @@
 				<th>Text</th>
 			</tr>
 		</div>
-	
-	<div id="posts-content">
-		<tr>
-			<td><%= post.title %></td>
-			<td><%= post.name %></td>
-			<td><%= post.text %></td>
-			<td><button type='button' id='like-button'> Like </button></td>
-		</tr>
-	</div>
-</table>
+
+		<div id="posts-content">
+			<tr>
+				<td><%= post.title %></td>
+				<td><%= post.name %></td>
+				<td><%= post.text %></td>
+
+				<td><button type='button' id='like-button'> Like </button></td>
+				<td id="liked-mark"></td>
+			</tr>
+		</div>
+	</table>
 
 <% end %>
 
 <div id="comments_home">
 	<h3>Latest comments</h3>
 		<% @comments.each do |comment| %> 
-		<table>
-			<th>Title</th>
-			<th>Name</th>
-			<th>Text</th>
+		<table width: "250px" height: "250px" id="table_comments">
+			<tr>
+				<th>Title</th>
+				<th>Name</th>
+				<th>Text</th>
+			</tr>
 
 			<tr>
 				<td><%= comment.title %></td> 
 				<td><%= comment.name %></td>
 				<td><%= comment.text %></td>
+				
 				<td><button type='button' id='like-button'> Like </button></td>
+				<td id="liked-mark"></td>
 			</tr>
 		</table>
 	<% end %>
 </div>
+
+<script type="text/javascript">
+
+	$('button#like-button').on('click', function() {
+		$('td#liked-mark').css('background-color', 'rgb(73,203,214)');
+	});
+
+</script>
 
 
 

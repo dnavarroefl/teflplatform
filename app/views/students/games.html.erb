@@ -1,42 +1,128 @@
 
-<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46"><h3> Matching Game </h3>
+<div id="games-header">
+	<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">
+	<h3 id="matching-title"> Matching Game </h3>
+</div>
 
 <p id="guide"> Click on the words associated to the verb PLAY.</p>
 		
-
 <div id="word-list">
 	<table>	
 		<th><strong> PLAY </strong></th>
 		<tr>
-			<td id="doRight"> football </td> 
-			<td id="doRight">ball </td> 
-			<td id="doWrong">dead </td>
-			<td id="doRight">ground </td>
-			<td id="doRight">around </td>
-			<td id="doRight">chess </td>
-			<td id="doRight">music </td>
-			<td id="doWrong">fight </td>
-			<td id="doRight">hockey </td>
-			<td id="doRight">the trumpet </td>
-			<td id="doRight">the piano </td>
+			<td id="doRight1"> football </td> 
+			<td id="doRight2">ball </td> 
+			<td id="doWrong1">dead </td>
+			<td id="doRight3">ground </td>
+			<td id="doRight4">around </td>
+			<td id="doRight5">chess </td>
+			<td id="doRight6">music </td>
+			<td id="doWrong2">fight </td>
+			<td id="doRight7">hockey </td>
+			<td id="doRight8">the trumpet </td>
+			<td id="doRight9">the piano </td>
 		</tr>
 	</table>
 </div>
 
 <script type="text/javascript">
 
-$('td#doRight').on('click', function() {
-	alert('Correct!');
-});
+	$('td#doRight1').on('click', function() {
+		alert('Correct!');
+	});
 
-$('td#doWrong').on('click', function() {
-	alert('Wrong!');
-});
+	$('td#doRight1').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight2').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight3').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight4').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight5').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight6').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight7').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight8').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doRight9').on('click', function() {
+		alert('Correct!');
+	});
+
+	$('td#doWrong1').on('click', function() {
+		alert('Wrong!');	
+	});
+
+	$('td#doWrong2').on('click', function() {
+		alert('Wrong!');	
+	});
+
+	$('td#doRight1').on('click', function() {
+		$('td#doRight1').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight2').on('click', function() {
+		$('td#doRight2').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight3').on('click', function() {
+		$('td#doRight3').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight4').on('click', function() {
+		$('td#doRight4').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight5').on('click', function() {
+		$('td#doRight5').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight6').on('click', function() {
+		$('td#doRight6').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight7').on('click', function() {
+		$('td#doRight7').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight8').on('click', function() {
+		$('td#doRight8').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doRight9').on('click', function() {
+		$('td#doRight9').css('background-color', 'rgb(73,203,214)');
+	});
+
+	$('td#doWrong1').on('click', function() {
+		$('td#doWrong1').css('background-color', '#D11B1B');
+	});
+
+	$('td#doWrong2').on('click', function() {
+		$('td#doWrong2').css('background-color', '#D11B1B');
+	});
 
 </script>
 
 <div id="home-link">
-<%= link_to 'Home', root_path %>
+	<%= link_to 'Home', root_path %>
 </div>
 
 
