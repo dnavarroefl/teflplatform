@@ -1,7 +1,7 @@
 
 <div id="games-header">
 	<img id="match-games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">
-	<h3 id="matching-title"> Matching Game </h3>
+	<h3 id="matching-title">Matching Game </h3>
 </div>
 
 <hr>
@@ -33,53 +33,27 @@
 	</table>
 </div>
 
+	<table id="score_table">
+		<th> Students' Score </th>
+		<tr>
+			<td><b>New Player</b></td>
+			<td>Score<break>
+			<div id="output">0
+			</div>
+			</td>
+			</tr>
+	</table>
+
 <script type="text/javascript">
+	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
+	    $('#output').html(function(i, val) { return val*1+1 });
+	});
 
-	$('td#doRight1').on('click', function() {
+	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
 		alert('Correct!');
 	});
 
-	$('td#doRight1').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight2').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight3').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight4').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight5').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight6').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight7').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight8').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight9').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doWrong1').on('click', function() {
-		alert('Wrong!');	
-	});
-
-	$('td#doWrong2').on('click', function() {
+	$('td#doWrong1, td#doWrong2').on('click', function() {
 		alert('Wrong!');	
 	});
 

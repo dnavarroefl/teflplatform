@@ -1,50 +1,13 @@
 
-	
-	$('td#doRight1').on('click', function() {
+$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').click(function() {
+	    $('#output').html(function(i, val) { return val*1+1 });
+	});
+
+	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
 		alert('Correct!');
 	});
 
-	$('td#doRight1').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight2').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight3').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight4').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight5').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight6').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight7').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight8').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doRight9').on('click', function() {
-		alert('Correct!');
-	});
-
-	$('td#doWrong1').on('click', function() {
-		alert('Wrong!');	
-	});
-
-	$('td#doWrong2').on('click', function() {
+	$('td#doWrong1, td#doWrong2').on('click', function() {
 		alert('Wrong!');	
 	});
 
@@ -91,6 +54,7 @@
 	$('td#doWrong2').on('click', function() {
 		$('td#doWrong2').css('background-color', '#D11B1B');
 	});
+	
 
 /*
 	var user = {}

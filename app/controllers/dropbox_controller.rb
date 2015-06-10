@@ -1,3 +1,4 @@
+
 # ---------------------------------------------------------------------------------------
 # A Rails 3 controller that:
 # - Runs the through Dropbox's OAuth 2 flow, yielding a Dropbox API access token.
@@ -22,9 +23,29 @@
 
 require 'dropbox_sdk'
 require 'securerandom'
+require "active_support/core_ext/hash/keys"
+
 
 APP_KEY = "al6ru270vblzjzv"
 APP_SECRET = "onlnomqwilec4cg"
+
+=begin
+flow = DropboxOAuth2FlowNoRedirect.new(APP_KEY, APP_SECRET)
+       authorize_url = flow.start()
+
+# Have the user sign in and authorize this app
+        puts '1. Go to: ' + authorize_url
+        puts '2. Click "Allow" (you might have to log in first)'
+        puts '3. Copy the authorization code'
+        print 'Enter the authorization code here: '
+        code = gets.strip
+
+        # This will fail if the user gave us an invalid authorization code
+        access_token, user_id = flow.finish(code)
+
+        client = DropboxClient.new(access_token)
+        puts "linked account:", client.account_info().inspect
+=end
 
 class DropboxController < ApplicationController
 
@@ -40,6 +61,45 @@ class DropboxController < ApplicationController
         render :inline =>
             "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
     end
+
+module Dropbox
+  module Explorer
+    class Folder
+      def initialize(folder_metadata)
+        @folder_metadata = folder_metadata.symbolize_keys
+      end
+
+      def get_contents_paths(options = {})
+        if @folder_metadata[:contents]
+          if options[:only_files]
+            @folder_metadata[:contents].map { |content| content unless content['is_dir'] }.compact
+          else
+            @folder_metadata[:contents]
+          end
+        else
+          raise ArgumentError, "There is no contents for this folder metadata"
+        end
+      end
+    end
+  end
+end
+
+=begin
+    def get_file_and_metadata
+        client = DropboxClient.new(access_token)
+        puts "linked account:", client.account_info().inspect
+
+        file = open('working-draft.txt')
+        response = client.put_file('/magnum-opus.txt', file)
+        puts "uploaded:", response.inspect
+
+        root_metadata = client.metadata('/')
+        puts "metadata:", root_metadata.inspect
+
+        contents, metadata = client.get_file_and_metadata('/magnum-opus.txt')
+        open('magnum-opus.txt', 'w') {|f| f.puts contents }
+    end 
+=end
 
     def upload
         client = get_dropbox_client

@@ -37,52 +37,56 @@
 
 <h3 id="welcome">Welcome back!</h3>
 
-<h3 id="latest_posts"> Latest posts: </h3>
-	<% @posts.each do |post| %> 
-	<table id="table_posts"> 
-		<div id="posts-titles">
-			<tr>
-		    	<th>Title</th>
-				<th>Name</th>
-				<th>Text</th>
-			</tr>
-		</div>
 
-		<div id="posts-content">
-			<tr>
-				<td><%= post.title %></td>
-				<td><%= post.name %></td>
-				<td><%= post.text %></td>
+		    		
+							<h3 id="latest_posts"> Latest posts: </h3>
+								<% @posts.each do |post| %> 
+								<table id="table_posts"> 
+									<div id="posts-titles">
+										<tr>
+									    	<th>Title</th>
+											<th>Name</th>
+											<th>Text</th>
+										</tr>
+									</div>
 
-				<td><button type='button' id='like-button'> Like </button></td>
-				<td id="liked-mark"></td>
-			</tr>
-		</div>
-	</table>
+									<div id="posts-content">
+										<tr>
+											<td><%= post.title %></td>
+											<td><%= post.name %></td>
+											<td><%= post.text %></td>
 
-<% end %>
+											<td><button type='button' id='like-button'> Like </button></td>
+											<td id="liked-mark"></td>
+										</tr>
+									</div>
+								</table>
 
-<div id="comments_home">
-	<h3 id="latest_feedback">Latest feedback</h3>
-		<% @comments.each do |comment| %> 
-		<table width: "250px" height: "250px" id="table_comments">
-			<tr>
-				<th>Title</th>
-				<th>Name</th>
-				<th>Text</th>
-			</tr>
+							<% end %>
 
-			<tr>
-				<td><%= comment.title %></td> 
-				<td><%= comment.name %></td>
-				<td><%= comment.text %></td>
-				
-				<td><button type='button' id='like-button'> Like </button></td>
-				<td id="liked-mark"></td>
-			</tr>
-		</table>
-	<% end %>
-</div>
+		    			
+		    	
+		    				<div id="comments_home">
+								<h3 id="latest_feedback">Latest feedback</h3>
+									<% @comments.each do |comment| %> 
+									<table width: "250px" height: "250px" id="table_comments">
+										<tr>
+											<th>Title</th>
+											<th>Name</th>
+											<th>Text</th>
+										</tr>
+
+										<tr>
+											<td><%= comment.title %></td> 
+											<td><%= comment.name %></td>
+											<td><%= comment.text %></td>
+											
+											<td><button type='button' id='like-button'> Like </button></td>
+											<td id="liked-mark"></td>
+										</tr>
+									</table>
+								<% end %>
+							</div>
 
 <script type="text/javascript">
 
