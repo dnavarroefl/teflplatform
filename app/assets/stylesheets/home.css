@@ -69,9 +69,12 @@ h3 {
 }
 
 #like-button {
+   padding: 2px; 
    margin-left: 200px; 
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px;
+   margin: 5px;
+   font-size: 14px; 
 }
 
 div#posts-titles {
@@ -82,7 +85,7 @@ div#posts-content {
    margin: 10px;
 }
 
-div#games-header {
+div#games-header, div#tutors-header, div#teachers-header {
   margin-top: 30px; 
   margin-bottom: 40px; 
 }
@@ -92,6 +95,7 @@ h3#tools-title {
 }
 
 img#duolingo-logo {
+   margin-bottom: 15px; 
    float: center; 
 }
 
@@ -105,11 +109,21 @@ img#media-new {
    margin-top: 10px; 
 }
 
+table#spotify-table {
+   
+}
+
 img#contact-tutor {
    margin-top: -65px; 
 }
 
+h3#teachers-title {
+   margin-top: -38px;
+   margin-left: 60px;
+}
+
 img#dropbox-logo {
+  margin-bottom: 15px; 
   float: center; 
 }
 
@@ -156,7 +170,8 @@ th {
 }
 
 tr {
-   background-color: #D4D4BF; 
+   background-color: #D4D4BF;
+     
 }
 
 td {
