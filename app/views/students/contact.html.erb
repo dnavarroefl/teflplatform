@@ -1,5 +1,5 @@
 <span id="contact-tutor-header">
-  <h3 id="title-tutor"> Contact your tutor: </h3>
+  <h3 id="title-tutor"> Contact your teacher: </h3>
   <img id= "contact-tutor" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46">
 </span>
 
@@ -12,9 +12,13 @@
 <% @tutors.each do |tutor| %>
 <p>
 	<table id="tutor-table">
+
     <th> Contact info </th>
+    <td><img id="tutor-profile" width="50px" height="50px" src="https://avatars3.githubusercontent.com/u/11841774?v=3&s=460"></td>
 		<td><%= tutor.name %></td>
 		<td>Email: <%= tutor.email %></td>
+    <td>
+      <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="36"height="36" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png"></a></div><!-- Añadir botón para mandar e-mail --></td>
     <td>
       <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
           <div id="SkypeButton_Call_deivy.mc_1">
@@ -23,7 +27,7 @@
                 "name": "dropdown",
                 "element": "SkypeButton_Call_deivy.mc_1",
                 "participants": ["deivy.mc"],
-                "imageSize": 31
+                "imageSize": 40
               });
         </script>
       </div>      

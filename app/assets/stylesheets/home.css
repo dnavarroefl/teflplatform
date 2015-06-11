@@ -1,8 +1,8 @@
 div#home-header {
    text-align: center; 
-   margin-top: 30px;
-   margin-left: 1%;
-   margin-right: 1%; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
@@ -16,12 +16,16 @@ h1 {
    font-size: 25px;
 } 
 
+#welcome {
+   text-align: center; 
+}
+
 div#motto {
    margin-left: 10%; 
    margin-right: 10%; 
    padding-bottom: 10px; 
-   font-family: georgia; 
-   font-size: 16px; 
+   font-family: verdana; 
+   font-size: 18px; 
 }
 
 button#like-button, a:hover {
@@ -65,15 +69,16 @@ nav > img{
 }
 
 h3 {
-   margin-top: 40px;
+   margin-top: 30px;
+   margin-bottom: 20px; 
 }
 
 #like-button {
-   padding: 2px; 
+   padding: 4px; 
    margin-left: 200px; 
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px;
-   margin: 5px;
+   margin: 4px;
    font-size: 14px; 
 }
 
@@ -85,7 +90,11 @@ div#posts-content {
    margin: 10px;
 }
 
-div#games-header, div#tutors-header, div#teachers-header {
+div#comments-content {
+   margin-bottom: 10px; 
+}
+
+div#games-header, div#student-header, div#tutors-header, div#teachers-header {
   margin-top: 30px; 
   margin-bottom: 40px; 
 }
@@ -151,7 +160,8 @@ table#posts {
 
 
 h3#title-tutor {
-   margin-left: 45px
+   margin-left: 55px;
+   margin-bottom: 9px
 }
 
 table#tutor-feedback, table#tutor-table {
@@ -175,8 +185,12 @@ td {
 }
 
 tbody {
+   
    box-shadow: 0 0 1em;
    border-radius: 20px 20px 20px 20px;
+}
+
+#video-table {
 }
 
 div#back_link {
@@ -197,7 +211,7 @@ div#home-link {
    margin-left: 50%;
 }
 
-h3#matching-title {
+h3#matching-title, h1#student-title {
    margin-left: 30px; 
    padding: 10px; 
    margin-top: -50px;
@@ -206,6 +220,7 @@ h3#matching-title {
 
 p#guide {
    margin-left: 50px;
+   margin-bottom: 30px; 
 }
 
 footer {

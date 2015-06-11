@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Tefl Platform</title>
-  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'=> true %>
@@ -14,8 +14,11 @@
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-	<script type="text/javascript" src="posts.js"></script>
+	
+  <!-- Crean un error de MIME en el vídeo
+  <script type="text/javascript" src="posts.js"></script>
 	<script type="text/javascript" src="games.js"></script>
+  -->
 <%= yield %>
 
 </body>

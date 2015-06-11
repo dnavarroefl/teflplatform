@@ -11,37 +11,69 @@
 
 <hr>
 
-<p id="guide"> Click on the words associated to the verb PLAY.</p>
+
 		
-<div id="word-list">
-	<table>	
-		<th><strong> PLAY </strong></th>
-		<tr>
-			<td id="doRight1">football </td> 
-			<td id="doRight2">ball </td> 
-			<td id="doWrong1">door </td>
-			<td id="doRight3">ground </td>
-			<td id="doRight4">around </td>
-			<td id="doRight5">chess </td>
-			<td id="doRight6">music </td>
-			<td id="doWrong2">feast </td>
-			<td id="doRight7">hockey </td>
-			<td id="doRight8">the trumpet </td>
-			<td id="doRight9">the piano </td>
-		</tr>
-	</table>
+<div div="word-list">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<table id="matching_table">
+					
+					<tr>
+						<td><strong>Click on the words associated to the verb</strong> <b>PLAY</b>.</td>
+					</tr>
+					<tr>
+						<td id="doRight1">football </td> 
+					</tr>
+					<tr>
+						<td id="doRight2">ball </td> 
+					</tr>
+					<tr>
+						<td id="doWrong1">door </td>
+					</tr>
+					<tr>
+						<td id="doRight3">ground </td>
+					</tr>
+					<tr>
+						<td id="doRight4">around </td>
+					</tr>
+					<tr>
+						<td id="doRight5">chess </td>
+					</tr>
+					<tr>
+						<td id="doRight6">music </td>
+					</tr>
+					<tr>
+						<td id="doWrong2">feast </td>
+					</tr>
+					<tr>
+						<td id="doRight7">hockey </td>
+					</tr>
+					<tr>
+						<td id="doRight8">the trumpet </td>
+					</tr>
+					<tr>
+						<td id="doRight9">the piano </td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="col-md-6">
+				<table>
+				<th> YOUR SCORE </th>
+					<tr>
+						<td><b>New Player</b></td>
+						<td>
+						<div id="output">0
+						</div>
+						</td>
+						</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
 
-	<table id="score_table">
-		<th> Students' Score </th>
-		<tr>
-			<td><b>New Player</b></td>
-			<td>
-			<div id="output">0
-			</div>
-			</td>
-			</tr>
-	</table>
 
 <script type="text/javascript">
 	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {

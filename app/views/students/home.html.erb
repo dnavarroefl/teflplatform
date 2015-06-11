@@ -10,38 +10,46 @@
 	<hr>
 
 	<nav id="nav_bar">
-			
-			<span id="nav_bar">
+			<div class="container">
+				<div class="row">
+						<div class="col-md-8">
+								<span id="nav_bar">
 
-					<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36"> 
-					<%= link_to 'Teachers', teachers_path %>
+										<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36"> 
+										<%= link_to 'Teachers', teachers_path %>
 
-					<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
-					<%= link_to 'Students', students_path %>
+										<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
+										<%= link_to 'Students', students_path %>
 
-					<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
-				<%= link_to 'Contact', controller: "students", action: "contact" %>
+										<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
+									<%= link_to 'Contact', controller: "students", action: "contact" %>
 
-					<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
-				<%= link_to 'Games', controller: "students", action: "games" %>
+										<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
+									<%= link_to 'Games', controller: "students", action: "games" %>
 
-					<img id="tools" src="http://icons.iconarchive.
-					com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
-				<%= link_to 'Tools', controller: "students", action:"tools" %>
+										<img id="tools" src="http://icons.iconarchive.
+										com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
+									<%= link_to 'Tools', controller: "students", action:"tools" %>
 
-					<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
-				<%= link_to 'Media', controller: "students", action: "media" %>
+										<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
+									<%= link_to 'Media', controller: "students", action: "media" %>
 
-					<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
-				<%= link_to 'Posts', controller: "posts", action: "index" %>
-			</span>
+										<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
+									<%= link_to 'Posts', controller: "posts", action: "index" %>
+								</span>
+						</div>
+				</div>
+			</div>
 	</nav>
 
 	<hr>
 
 <h3 id="welcome">Welcome back!</h3>
 
-							<h3 id="latest_posts"> Latest posts: </h3>
+<div class="container">
+	<div class="row">
+						<div class="col-md-6">
+							<h3 id="latest_posts"> Latest posts </h3>
 								<% @posts.each do |post| %> 
 								<table id="table_posts"> 
 									<div id="posts-titles">
@@ -58,35 +66,43 @@
 											<td><%= post.name %></td>
 											<td><%= post.text %></td>
 
-											<td><button type='button' id='like-button'><b>Like<b> </button></td>
+											<td><button type='button' id='like-button'> Like </button></td>
 											<td id="likes"></td>
 										</tr>
 									</div>
 								</table>
 
 							<% end %>
+						</div>
+
+						<div class="col-md-6">
 
 		    				<div id="comments_home">
-								<h3 id="latest_feedback">Latest feedback</h3>
-									<% @comments.each do |comment| %> 
-									<table width: "250px" height: "250px" id="table_comments">
-										<tr>
-											<th>Title</th>
-											<th>Name</th>
-											<th>Text</th>
-										</tr>
+									<h3 id="latest_feedback">Latest feedback</h3>
+										<% @comments.each do |comment| %> 
+										<table id="table_comments">
+												<tr>
+													<th>Title</th>
+													<th>Name</th>
+													<th>Text</th>
+												</tr>
 
-										<tr>
-											<td><%= comment.title %></td> 
-											<td><%= comment.name %></td>
-											<td><%= comment.text %></td>
-											
-											<td><button type='button' id='like-button'> Like </button></td>
-											<td id="likes"></td>
-										</tr>
-									</table>
-								<% end %>
+												<div id="comments-content">
+														<tr>
+															<td><%= comment.title %></td> 
+															<td><%= comment.name %></td>
+															<td><%= comment.text %></td>
+															
+															<td><button type='button' id='like-button'> Like </button></td>
+															<td id="likes"></td>
+														</tr>
+													</div>
+												</table>
+												
+											<% end %>
 							</div>
+					</div>
+				</div>
 
 <script type="text/javascript">
 
