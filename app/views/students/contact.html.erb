@@ -15,8 +15,23 @@
     <th> Contact info </th>
 		<td><%= tutor.name %></td>
 		<td>Email: <%= tutor.email %></td>
+    <td>
+      <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+          <div id="SkypeButton_Call_deivy.mc_1">
+            <script type="text/javascript">
+              Skype.ui({
+                "name": "dropdown",
+                "element": "SkypeButton_Call_deivy.mc_1",
+                "participants": ["deivy.mc"],
+                "imageSize": 31
+              });
+        </script>
+      </div>      
+    </td>
 	</table>
 <% end %>
+
+<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 
 <table id="tutor-feedback">
 
