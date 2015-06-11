@@ -1,3 +1,20 @@
+/*Home CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 div#home-header {
    text-align: center; 
    margin-top: auto;
@@ -32,7 +49,7 @@ button#like-button, a:hover {
     background-color: #49CBD6;
 } 
 
-h3#latest_posts, h3#latest_feedback
+h3#latest_posts, h3#latest_feedback{
    padding: 10px;   
 }
 
@@ -40,6 +57,8 @@ h3 {
    float: auto; 
    margin-left: 10%; 
    margin-right: 10%; 
+   margin-top: 30px;
+   margin-bottom: 20px; 
 }
 
 body { 
@@ -68,11 +87,6 @@ nav > img{
    margin-right: 10%; 
 }
 
-h3 {
-   margin-top: 30px;
-   margin-bottom: 20px; 
-}
-
 #like-button {
    padding: 4px; 
    margin-left: 200px; 
@@ -82,8 +96,27 @@ h3 {
    font-size: 14px; 
 }
 
-div#posts-titles {
-   margin: 10px;
+/*Posts, comments & feedback CSS*/
+
+table#posts {
+   margin-right: 20px;
+   margin-left: 20px;  
+   border-radius: 20px 30px 30px 20px;
+}
+
+span#recent-posts-header {
+   
+}
+
+h3#post-title {
+   text-align: center; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px; 
+
 }
 
 div#posts-content {
@@ -94,46 +127,55 @@ div#comments-content {
    margin-bottom: 10px; 
 }
 
+/* Headers & Titles */
+
 div#games-header, div#student-header, div#tutors-header, div#teachers-header {
   margin-top: 30px; 
   margin-bottom: 40px; 
 }
 
+h3#matching-title, h1#student-title, h3#media-title {
+   text-align: center; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px; 
+   margin-left: 30px; 
+   padding: 10px; 
+   margin-top: -50px;
+   margin-left: 60px;   
+}
+
+/* Game CSS */
+
+p#guide {
+   margin-left: 50px;
+   margin-bottom: 30px; 
+}
+
+td#doRight,td#doWrong {
+   padding: 20px; 
+   font-size: 16px;
+}
+
+/*Tools CSS*/
+
 h3#tools-title {
-   text-align: center;    
+   text-align: center; 
+   padding: 10px; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px;    
 }
 
 img#duolingo-logo {
    margin-bottom: 15px; 
    float: center; 
-}
-
-h3#title, h3#media-title, h3#post-title {
-   margin-top: -40px; 
-   padding: 10px; 
-   margin-left: 30px; 
-}
-
-img#media-new {
-   margin-top: 10px; 
-}
-
-table#spotify-table {
-   
-}
-
-img#contact-tutor {
-   margin-top: -65px; 
-}
-
-h3#teachers-title {
-   margin-top: -38px;
-   margin-left: 60px;
-}
-
-img#dropbox-logo {
-  margin-bottom: 15px; 
-  float: center; 
 }
 
 div#duolingo_container  {
@@ -144,6 +186,11 @@ div#duolingo_container  {
    border-radius: 20px 30px 30px 20px;
 }
 
+img#dropbox-logo {
+  margin-bottom: 15px; 
+  float: center; 
+}
+
 div#dropbox_container  {
    text-align: center; 
    margin: 10px;
@@ -152,16 +199,55 @@ div#dropbox_container  {
    border-radius: 20px 30px 30px 20px;
 }
 
-table#posts {
-   margin-right: 20px;
-   margin-left: 20px;  
-   border-radius: 20px 30px 30px 20px;
+/*Media CSS*/
+
+h3#title, h3#media-title, h3#post-title { 
+   padding: 10px; 
+   margin-left: 60px; 
 }
 
+img#media-new {
+   margin-top: 10px;
+   margin-left: 0px;
+}
+
+table#spotify-table {
+   
+}
+
+/*Teacher & Tutor CSS*/ 
+
+h3#teachers-title {
+   text-align: center; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px; 
+   padding: 3px; 
+   margin-top: -38px;
+   margin-left: 60px;
+}
 
 h3#title-tutor {
-   margin-left: 55px;
-   margin-bottom: 9px
+   
+   text-align: center;
+   padding: 4px; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px; 
+}
+
+h3#teachers-title2 {
+   margin-left: 34%;
+   margin-right: 25%;
+   padding: 10px; 
+}
+
+div#issuu-reading {
+   margin-left: 25%;
+   margin-right: 25%;
 }
 
 table#tutor-feedback, table#tutor-table {
@@ -171,6 +257,8 @@ table#tutor-feedback, table#tutor-table {
 span#contact-tutor-header {
    display: inline; 
 }
+
+/*Tables style*/
 
 th {
    font-size: 14px; 
@@ -190,37 +278,19 @@ tbody {
    border-radius: 20px 20px 20px 20px;
 }
 
-#video-table {
+div#word-list {
+   margin: 10px;
+}
+
+/*Links CSS */
+
+div#home-link {
+   margin-left: auto;
+   text-align: center; 
 }
 
 div#back_link {
    text-align: center;
-}
-
-div#word-list {
-   margin: 10px;
-  
-}
-
-td#doRight,td#doWrong {
-   padding: 20px; 
-   font-size: 16px;
-}
-
-div#home-link {
-   margin-left: 50%;
-}
-
-h3#matching-title, h1#student-title {
-   margin-left: 30px; 
-   padding: 10px; 
-   margin-top: -50px;
-   margin-left: 60px;   
-}
-
-p#guide {
-   margin-left: 50px;
-   margin-bottom: 30px; 
 }
 
 footer {
