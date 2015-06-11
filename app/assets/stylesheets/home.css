@@ -15,6 +15,8 @@
 
 
 
+
+
 div#home-header {
    text-align: center; 
    margin-top: auto;
@@ -134,7 +136,7 @@ div#games-header, div#student-header, div#tutors-header, div#teachers-header {
   margin-bottom: 40px; 
 }
 
-h3#matching-title, h1#student-title, h3#media-title {
+h1#students-wall, h3#matching-title, h1#student-title, h3#media-title {
    text-align: center; 
    margin-top: auto;
    margin-left: auto;
@@ -225,6 +227,16 @@ h3#teachers-title {
    padding: 3px; 
    margin-top: -38px;
    margin-left: 60px;
+}
+
+div#tutors-header {
+   text-align: center; 
+   margin-top: auto;
+   margin-left: auto;
+   margin-right: auto; 
+   background-color: #49CBD6;  
+   box-shadow: 0 0 1em black;
+   border-radius: 20px 20px 20px 20px; 
 }
 
 h3#title-tutor {

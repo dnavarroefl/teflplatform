@@ -1,58 +1,68 @@
 <div id="tutors-header">
-	<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46">
-	<h1> Tutor's Index </h1>
+	
+	<h1 id="tutors-title"><img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46"> Tutor's Index </h1>
 </div>
 
 <hr>
+
+<div id="home-link">
 <%= link_to 'Home', root_path %>
+</div>
+
+<div class="col-md-6">
+				<h3>Feedback</h3>
+				<div id="comments-titles">
+				<table> 
+					<tr>
+				    <th>Name</th>
+						<th>Title</th>
+						<th>Text</th>
+					</tr>
+				</div>
+
+				<div id="comments-content">
+					<% @comments.each do |comment| %> 
+					<tr>
+				    <td><%= comment.name %></td>
+						<td><%= comment.title %></td>
+						<td><%= comment.text %></td>
+					</tr>
+
+					<% end %>
+				</table><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <hr>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Students</h3>
+				<div id="students-titles">
+				<table> 
+					<tr>
+						<th>Name</th>
+				    	<th>Age</th>
+						<th>Level</th>
+					</tr>
+				</div>
+			</div>
 
-<h3>Students</h3>
-<div id="students-titles">
-<table> 
-	<tr>
-		<th>Name</th>
-    	<th>Age</th>
-		<th>Level</th>
-		<th>Progress</th>
-		<th>Score</th>
-	</tr>
-</div>
+				<div id="students-content">
+					<% @students.each do |student| %> 
+					<tr>
+						<td><%= student.name %></td>
+				    	<td><%= student.age %></td>
+						<td><%= student.level %></td>
+					</tr>
 
-<div id="students-content">
-	<% @students.each do |student| %> 
-	<tr>
-		<td><%= student.name %></td>
-    	<td><%= student.age %></td>
-		<td><%= student.level %></td>
-		<td><%= student.progress %></td>
-		<td><%= student.score %></td>
-	</tr>
-
-	<% end %>
-</table><br>
-</div>
-
-<h3>Feedback</h3>
-<div id="comments-titles">
-<table> 
-	<tr>
-    <th>Name</th>
-		<th>Title</th>
-		<th>Text</th>
-	</tr>
-</div>
-
-<div id="comments-content">
-	<% @comments.each do |comment| %> 
-	<tr>
-    <td><%= comment.name %></td>
-		<td><%= comment.title %></td>
-		<td><%= comment.text %></td>
-	</tr>
-
-	<% end %>
-</table><br>
+					<% end %>
+				</table><br>
+				</div>
+			</div>
 </div>
 
 <h3>Posts</h3>
