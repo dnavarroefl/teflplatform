@@ -1,5 +1,10 @@
-<!-- Incluir logo de la plataforma <a href src="/tefl_logo.jpg">-->
-	
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+			
 	<div id="home-header">
 		<h1><b> TEFL Platform for teachers & students </b></h1>
 
@@ -47,83 +52,68 @@
 
 <h3 id="welcome">Welcome back!</h3>
 
-<div class="container">
-	<div class="row">
-						<div class="col-md-6">
-							<h3 id="latest_posts"> Latest posts </h3>
-								<% @posts.each do |post| %> 
-								<table id="table_posts"> 
+<article>
+	<div class="container">
+		<div class="row">
+							<div class="col-md-2">
+								<h3 id="latest_posts"> Latest posts </h3>
 									<div id="posts-titles">
-										<tr>
-									    	<th>Title</th>
-											<th>Name</th>
-											<th>Text</th>
-										</tr>
-									</div>
-
-									<div id="posts-content">
-										<tr>
-											<td><%= post.title %></td>
-											<td><%= post.name %></td>
-											<td><%= post.text %></td>
-
-											<td><button type='button' id='like-button'> Like </button></td>
-											<td id="likes"></td>
-
-											<td>
-												<!-- Habilitar comentarios en los posts -->
-											</td>
-
-										</tr>
-									</div>
-								</table>
-
-							<% end %>
-						</div>
-
-						<div class="col-md-6">
-
-		    				<div id="comments_home">
-									<h3 id="latest_feedback">Latest feedback</h3>
-										<% @comments.each do |comment| %> 
-										<table id="table_comments">
+											<table> 
 												<tr>
+											    <th>Name</th>
 													<th>Title</th>
-													<th>Name</th>
 													<th>Text</th>
 												</tr>
+										</div>
 
-												<div id="comments-content">
+											<div id="posts-content">
+												<% @posts.each do |post| %> 
 														<tr>
-															<td><%= comment.title %></td> 
-															<td><%= comment.name %></td>
-															<td><%= comment.text %></td>
-															
+													    <td><%= post.name %></td>
+															<td><%= post.title %></td>
+															<td><%= post.text %></td>
 															<td><button type='button' id='like-button'> Like </button></td>
-															<td id="likes"></td>
-														</tr>
-													</div>
-												</table>
-												
-											<% end %>
+		                                    <td id="likes"></td>
+													</tr>		
+															<% end %>
+
+														<th> Leave a comment for the class </th>
+
+														<tr>
+															<td>
+														
+													<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="1"></div>
+												</td>
+											</tr>
+											</table><br>
+									</div>
 							</div>
 					</div>
-				</div>
+		</div>
+		
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-<script type="text/javascript">
+	 <script type="text/javascript">
 
-	$('button#like-button').on('click', function() {
-		alert('Thanks for your support!');
-	});
+        $('button#like-button').on('click', function() {
+          alert('Thanks for your support!');
+        });
+    </script>
+</body>
+<footer>
+	David Navarro, 2015
+</footer>
+</html>
 
-/* Contador de likes para cada comentario y post
 
-	$('button#like-button').on('click', function() {
-	    $('#likes').html(function(i, val) { return val*1+1 });
-	});
-*/
-
-</script>
 
 
 

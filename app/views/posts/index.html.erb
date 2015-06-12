@@ -1,64 +1,82 @@
-<span id="recent-posts-header">
- <h3 id="post-title"> <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36"> Recent Posts </h3>
-</span>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
 
-<hr>
+  <article>
+      <span id="recent-posts-header">
+       <h3 id="post-title"> <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36"> Recent Posts </h3>
+      </span>
 
-<div id="home-link">
-<%= link_to 'Home', root_path %>
-</div>
+      <hr>
 
-<hr>
+      <div id="home-link">
+      <%= link_to 'Home', root_path %>
+      </div>
 
-<div id="posts-titles">
-<table> 
-	<tr>
-    <th>Name</th>
-		<th>Title</th>
-		<th>Text</th>
-	</tr>
-</div>
+      <hr>
 
-<div id="posts-content">
-	<% @posts.each do |post| %> 
-	<tr>
-    <td><%= post.name %></td>
-		<td><%= post.title %></td>
-		<td><%= post.text %></td>
-	</tr>
+      <div id="posts-titles">
+      <table> 
+      	<tr>
+          <th>Name</th>
+      		<th>Title</th>
+      		<th>Text</th>
+      	</tr>
+      </div>
 
-	<% end %>
-</table><br>
-</div>
+      <div id="posts-content">
+      	 <% @posts.each do |post| %> 
+      	<tr>
+          <td><%= post.name %></td>
+      		<td><%= post.title %></td>
+      		<td><%= post.text %></td>
+          <td><button type='button' id='like-button'> Like </button></td>
+                                    <td id="likes"></td>
+      	</tr>
 
-  <%= form_for :post, url: posts_path do |f| %>
+      	<% end %>
 
-  <table>
+      <div id="post-comments">
+        <tr>
+          <%= form_for :post, url: posts_path do |f| %>
 
-    <th> Post your ideas!</th> 
-    
-    <tr>
-      <td>
-         <p>
-            <%= f.label :title %><br>
-            <%= f.text_field :title %>
-          </p>
+            <th> Post your ideas!</th> 
+            
+            <tr>
+              <td>
+                 <p>
+                    <%= f.label :title %><br>
+                    <%= f.text_field :title %>
+                  </p>
 
-          <p>
-            <%= f.label :name %><br>
-            <%= f.text_field :name %>
-          </p>
-         
-          <p>
-            <%= f.label :text %><br>
-            <%= f.text_area :text %>
-          </p>
-         
-          <p>
-            <%= f.submit %>
-          </p>
-      </td>
-    </tr>
-<% end %>
-  </table>
+                  <p>
+                    <%= f.label :name %><br>
+                    <%= f.text_field :name %>
+                  </p>
+                 
+                  <p>
+                    <%= f.label :text %><br>
+                    <%= f.text_area :text %>
+                  </p>
+                 
+                  <p>
+                    <%= f.submit %>
+                  </p>
+              </td>
+            </tr>
+      </div>
+        <% end %>
+      </div>
+  </article>
+
+    <script type="text/javascript">
+
+        $('button#like-button').on('click', function() {
+          alert('Thanks for your support!');
+        });
+    </script>
+</body>
+</html>
 

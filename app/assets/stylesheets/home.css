@@ -17,6 +17,13 @@
 
 
 
+
+
+
+
+
+
+
 div#home-header {
    text-align: center; 
    margin-top: auto;
@@ -127,6 +134,9 @@ div#posts-content {
 
 div#comments-content {
    margin-bottom: 10px; 
+}
+
+div#post-comments {
 }
 
 /* Headers & Titles */
@@ -274,18 +284,22 @@ span#contact-tutor-header {
 
 th {
    font-size: 14px; 
-   padding: 15px;
-   margin: 10px;
+   margin-left: 10px; 
+   padding: 20px;
+}
+
+tr {
+   padding: 10px; 
+   
 }
 
 td {
    font-size: 14px; 
    border-radius: 20px 30px 30px 20px;
-   padding: 15px;  
+   padding: 10px;  
 }
 
 tbody {
-   
    box-shadow: 0 0 1em;
    border-radius: 20px 20px 20px 20px;
 }
