@@ -1,0 +1,48 @@
+<h1 id="students-wall"> Answers </h1>
+
+<hr>
+<div id="home-link">
+<%= link_to 'Home', root_path %>
+</div>
+<hr>
+
+<div id="answers_home">
+									<h3 id="latest_feedback">Latest feedback</h3>
+										<% @answers.each do |answer| %> 
+										<table id="table_answers">
+												<tr>
+													<th>Title</th>
+													<th>Name</th>
+													<th>Text</th>
+												</tr>
+
+												<div id="answers-content">
+														<tr>
+															<td><%= answer.title %></td> 
+															<td><%= answer.name %></td>
+															<td><%= answer.text %></td>
+															
+															<td><button type='button' id='like-button'> Like </button></td>
+															<td id="likes"></td>
+														</tr>
+													</div>
+												</table>
+												
+											<% end %>
+							</div>
+					</div>
+
+<script type="text/javascript">
+
+	$('button#like-button').on('click', function() {
+		alert('Thanks for your support!');
+	});
+
+/* Contador de likes para cada comentario y post
+
+	$('button#like-button').on('click', function() {
+	    $('#likes').html(function(i, val) { return val*1+1 });
+	});
+*/
+
+</script>

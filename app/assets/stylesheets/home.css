@@ -24,11 +24,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 div#home-header {
    text-align: center; 
-   margin-top: auto;
-   margin-left: auto;
-   margin-right: auto; 
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
@@ -132,12 +141,22 @@ div#posts-content {
    margin: 10px;
 }
 
+div#post-comments {
+   color: white; 
+}
+
 div#comments-content {
    margin-bottom: 10px; 
 }
 
-div#post-comments {
-}
+img#post-its {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+   margin-top: 620px;
+   margin-left: 90px
+} 
 
 /* Headers & Titles */
 
@@ -162,14 +181,16 @@ h1#students-wall, h3#matching-title, h1#student-title, h3#media-title {
 
 /* Game CSS */
 
-p#guide {
-   margin-left: 50px;
-   margin-bottom: 30px; 
+h4#game_instructions {
+   text-align: center; 
 }
 
 td#doRight,td#doWrong {
    padding: 20px; 
    font-size: 16px;
+}
+
+th#score, td#player {
 }
 
 /*Tools CSS*/
@@ -219,12 +240,16 @@ h3#title, h3#media-title, h3#post-title {
 }
 
 img#media-new {
-   margin-top: 10px;
-   margin-left: 0px;
+   margin-top: -3px; 
+
 }
 
-table#spotify-table {
-   
+table#video-table {
+   margin-left: -170px; 
+}
+
+table#ivoox-table {
+   margin-left: -17px;
 }
 
 /*Teacher & Tutor CSS*/ 
