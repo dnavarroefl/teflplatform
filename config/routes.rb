@@ -26,5 +26,5 @@ Rails.application.routes.draw do
   post 'comments/new' => 'comments#create'
   post 'contact/new' => 'comments#create'
 
-  resources :tutors, :students, :posts, :comments
+  resources :tutors, :students, :posts, :comments, :answers
 end

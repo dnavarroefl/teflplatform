@@ -2,9 +2,53 @@
 <html>
 <head>
 </head>
+
+<div id="top-bar">
+      <nav id="nav_bar">
+
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><span id="teachers-link">
+                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
+                    </span><a href="/teachers">TEACHERS</a>
+                  </li>
+
+          <li role="presentation"><span id="student-link">
+                    <img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
+                  </span><a href="/students">STUDENTS</a>
+                </li>
+      
+          <li role="presentation"><span id="tools-link">
+                    <img id="tools" src="http://icons.iconarchive.
+                    com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
+                  </span><a href="/tools">TOOLS</a>
+                </li>
+                  
+
+           <li role="presentation"><span id="games-link">
+                    <img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
+                </span><a href="/games">GAMES</a>
+              </li>
+            <li role="presentation"><span id="media-link">
+                    <img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
+                </span><a href="/media">MEDIA</a>
+              </li>
+
+             <li role="presentation"><span id="posts-link">
+                    <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
+                </span><a href="/posts">POSTS</a>
+                </li>
+
+              <li role="presentation"><span id="contact-link">
+                    <img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
+                </span><a href="contact">CONTACT</a>
+                </li>
+        </ul>
+      </div>
+  </nav>
+</div>
+
 <body>
 
-  <article>
       <span id="recent-posts-header">
        <h3 id="post-title"> <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36"> Recent Posts </h3>
       </span>
@@ -17,32 +61,28 @@
 
       <hr>
 
-      <div id="posts-titles">
       <table> 
-      	<tr>
-          <th>Name</th>
-      		<th>Title</th>
-      		<th>Text</th>
-      	</tr>
-      </div>
+        <div id="posts-content">
+        	 <% @posts.each do |post| %> 
+        	<tr>
+            <td><b><%= post.name %></b></td>
+          </tr>
+          <tr>
+            <td><%= post.title %></td> 
+          <tr>
+            <tr>
+                 <td><%= Time.now %></td>
+            </tr>
+          <tr>
+        		<td><%= post.text %></td>
+            <td><button type='button' id='like-button'> Like </button></td>
+                                      <td id="likes"></td>
+        	</tr>
 
-      <div id="posts-content">
-      	 <% @posts.each do |post| %> 
-      	<tr>
-          <td><%= post.name %></td>
-      		<td><%= post.title %></td>
-      		<td><%= post.text %></td>
-          <td><button type='button' id='like-button'> Like </button></td>
-                                    <td id="likes"></td>
-      	</tr>
+        	<% end %>
+        </div>
 
-      	<% end %>
-
-        <tr>
-          <td><img id="post-its" src="http://hosting1.disentropy.net/ptblog/wp-content/uploads/2011/05/postit.png" width: "1000" height= "300"></td>
-        </tr>
-
-      <div id="post-comments">
+        <table id="post-comments">
         <tr>
           <%= form_for :post, url: posts_path do |f| %>
 
@@ -70,11 +110,12 @@
                   </p>
               </td>
             </tr>
-        </div>
-    </div>
-        <% end %>
-      </div>
-  </article>
+              <table>
+          </div>
+          </div>
+          <% end %>
+</div>
+
 
     <script type="text/javascript">
 
