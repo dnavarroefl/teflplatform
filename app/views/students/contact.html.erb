@@ -1,106 +1,64 @@
-<div id="top-bar">
-      <nav id="nav_bar">
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-        <ul class="nav nav-pills">
+<body>
+    <h3 id="title-tutor"><img id= "contact-tutor" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46"> Contact your teacher </h3> 
 
-          <li role="presentation"><span id="home-link">
-                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
-                    </span><a href="#">HOME</a>
-                  </li>
-          
-          <li role="presentation"><span id="teachers-link">
-                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
-                    </span><a href="/teachers">TEACHERS</a>
-                  </li>
+  <hr>
 
-          <li role="presentation"><span id="student-link">
-                    <img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
-                  </span><a href="/students">STUDENTS</a>
-                </li>
-      
-          <li role="presentation"><span id="tools-link">
-                    <img id="tools" src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
-                  </span><a href="/tools">TOOLS</a>
-                </li>
-                  
+  <% @tutors.each do |tutor| %>
+  <p>
+  	<table id="tutor-table">
 
-           <li role="presentation"><span id="games-link">
-                    <img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
-                </span><a href="/games">GAMES</a>
-              </li>
-            <li role="presentation"><span id="media-link">
-                    <img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
-                </span><a href="/media">MEDIA</a>
-              </li>
+      <th> Contact info </th>
+      <td><img id="tutor-profile" width="50px" height="50px" src="https://avatars3.githubusercontent.com/u/11841774?v=3&s=460"></td>
+  		<td><%= tutor.name %></td>
+  		<td>Email: <%= tutor.email %></td>
+      <td>
+        <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="36"height="36" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png"></a></div>Send Email</td>
+      <td>
+        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+            <div id="SkypeButton_Call_deivy.mc_1">
+              <script type="text/javascript">
+                Skype.ui({
+                  "name": "dropdown",
+                  "element": "SkypeButton_Call_deivy.mc_1",
+                  "participants": ["deivy.mc"],
+                  "imageSize": 40
+                });
+          </script>
+        </div>      
+      </td>
+  	</table>
+  <% end %>
 
-             <li role="presentation"><span id="posts-link">
-                    <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
-                </span><a href="/posts">POSTS</a>
-                </li>
+  <script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 
-              <li role="presentation" class="active"><span id="contact-link">
-                    <img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
-                </span><a href="contact">CONTACT</a>
-                </li>
-        </ul>
-      </div>
-  </nav>
-</div>
+  <table id="post-comments">
 
-  <h3 id="title-tutor"><img id= "contact-tutor" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="46" width="46"> Contact your teacher </h3> 
-
-<hr>
-
-<% @tutors.each do |tutor| %>
-<p>
-	<table id="tutor-table">
-
-    <th> Contact info </th>
-    <td><img id="tutor-profile" width="50px" height="50px" src="https://avatars3.githubusercontent.com/u/11841774?v=3&s=460"></td>
-		<td><%= tutor.name %></td>
-		<td>Email: <%= tutor.email %></td>
-    <td>
-      <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="36"height="36" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png"></a></div><!-- Añadir botón para mandar e-mail --></td>
-    <td>
-      <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-          <div id="SkypeButton_Call_deivy.mc_1">
-            <script type="text/javascript">
-              Skype.ui({
-                "name": "dropdown",
-                "element": "SkypeButton_Call_deivy.mc_1",
-                "participants": ["deivy.mc"],
-                "imageSize": 40
-              });
-        </script>
-      </div>      
-    </td>
-	</table>
-<% end %>
-
-<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
-
-<table id="post-comments">
-
-  <th> Send feedback: </th>
-  <tr>
-    <td>
-      <%= form_for :comment, url: comments_path do |f| %>
-        <p>
-          <%= f.label :name %><br>
-          <%= f.text_field :name %>
-        </p>
-
-      <p>
-        <%= f.label :text %><br>
-        <%= f.text_area :text %>
-      </p>
+    <th> Send feedback: </th>
+    <tr>
+      <td>
+        <%= form_for :comment, url: comments_path do |f| %>
+          <p>
+            <%= f.label :name %><br>
+            <%= f.text_field :name %>
+          </p>
 
         <p>
-          <%= f.submit %>
+          <%= f.label :text %><br>
+          <%= f.text_area :text %>
         </p>
-      <% end %>
-    </td>
-  </tr>
-</table>
 
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
 

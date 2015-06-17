@@ -1,102 +1,57 @@
-<div id="top-bar">
-			<nav id="nav_bar">
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-				<ul class="nav nav-pills">
+<body>
+	<h3 id="media-title"><img id="media-new" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="46" width="46">
+	 Have fun with the latest media </h3>
 
-					<li role="presentation"><span id="home-link">
-											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
-										</span><a href="#">HOME</a>
-									</li>
+	<hr>
 
-				  <li role="presentation"><span id="teachers-link">
-											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
-										</span><a href="/teachers">TEACHERS</a>
-									</li>
-
-				  <li role="presentation"><span id="student-link">
-										<img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
-									</span><a href="/students">STUDENTS</a>
-								</li>
-			
-				  <li role="presentation"><span id="tools-link">
-										<img id="tools" src="http://icons.iconarchive.
-										com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
-									</span><a href="/tools">TOOLS</a>
-								</li>
-									
-
-				   <li role="presentation"><span id="games-link">
-										<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
-								</span><a href="/games">GAMES</a>
-							</li>
-				    <li role="presentation" class="active"><span id="media-link">
-										<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
-								</span><a href="/media">MEDIA</a>
-							</li>
-
-				     <li role="presentation"><span id="posts-link">
-										<img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
-								</span><a href="/posts">POSTS</a>
-								</li>
-
-				      <li role="presentation"><span id="contact-link">
-										<img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
-								</span><a href="contact">CONTACT</a>
-								</li>
-				</ul>
-			</div>
-	</nav>
-</div>
-
-<h3 id="media-title"><img id="media-new" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="46" width="46">
- Have fun with the latest media </h3>
-
-<div id="home-link">
-<%= link_to 'Home', root_path %><br>
-</div>
-
-<hr>
-
-<div class="container">
-
-	<div class="row">
-		<div class="col-md-6">
-			<table id="spotify-table">
-				<th>Listen to our Karaoke Songs! </th> 
-				<tr>
-					<td>
-						<div id="spotify_container">
-							<iframe src="https://embed.spotify.com/?uri=spotify:user:deivymc:playlist:3bSJWrbDG4rKwURqdBVmJP" width="300" height="380" frameborder="0" allowtransparency="true"></iframe><br>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="col-md-6">
-			<div class="embed-responsive embed-responsive-16by9">
-			<table id="video-table">
-				<th> Latest videos </th> 
-				<tr>
-					<td>
-						<iframe class="embed-responsive-item" width="560" height="315" style="border: 1px solid #49CBD6" src="https://www.youtube.com/embed/ZbNKTOXUVow?list=PL5146C9A4FD908B6D" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
-			</div>
-		</div>
-	</div>
-	
+	<div class="container">
+		<div class="row">
 			<div class="col-md-6">
-				<table id="ivoox-table">
-				<th> Latest podcasts </th> 
-				<tr>
-					<td>
-						<iframe src="http://www.ivoox.com/player_es_podcast_17685_1.html" width="100%" style="border: 1px solid #49CBD6" height="440" frameborder="0" allowfullscreen="0" scrolling="no" ></iframe>
-					</td>
-				</tr>
-			</table>
+				<table id="spotify-table">
+					<th>Listen to our Karaoke Songs! </th> 
+					<tr>
+						<td>
+							<div id="spotify_container">
+								<iframe src="https://embed.spotify.com/?uri=spotify:user:deivymc:playlist:3bSJWrbDG4rKwURqdBVmJP" width="300" height="380" frameborder="0" allowtransparency="true"></iframe><br>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="col-md-6">
+				<div class="embed-responsive embed-responsive-16by9">
+				<table id="video-table">
+					<th> Latest videos </th> 
+					<tr>
+						<td>
+							<iframe class="embed-responsive-item" width="560" height="315" style="border: 1px solid #49CBD6" src="https://www.youtube.com/embed/ZbNKTOXUVow?list=PL5146C9A4FD908B6D" frameborder="0" allowfullscreen></iframe>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</div>
 		</div>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<table id="ivoox-table">
+					<th> Latest podcasts </th> 
+					<tr>
+						<td>
+							<iframe src="http://www.ivoox.com/player_es_podcast_17685_1.html" width="100%" style="border: 1px solid #49CBD6" height="440" frameborder="0" allowfullscreen="0" scrolling="no" ></iframe>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
 
 
 

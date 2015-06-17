@@ -2,14 +2,78 @@
 <html>
 <head>
   <title>Tefl Platform</title>
-  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" type="text/css" href="home.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <meta charset="utf-8">
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'=> true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<div id="top-bar">
+      <nav id="nav_bar">
+
+        <ul class="nav nav-pills">
+
+        <li role="presentation" ><span id="home-link">
+                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
+                    </span><a href="/home">HOME</a>
+                  </li>
+
+          <li role="presentation"> <span id="teachers-link">
+                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
+                    </span><a href="/teachers">TEACHERS</a>
+                  </li>
+
+          <li role="presentation"><span id="student-link">
+                    <img id="student" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="36" width="36"> 
+                  </span><a href="/students">STUDENTS</a>
+                </li>
+      
+          <li role="presentation"><span id="tools-link">
+                    <img id="tools" src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
+                  </span><a href="/tools">TOOLS</a>
+                </li>
+                  
+           <li role="presentation"><span id="games-link">
+                    <img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
+                </span><a href="/games">GAMES</a>
+              </li>
+            <li role="presentation"><span id="media-link">
+                    <img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
+                </span><a href="/media">MEDIA</a>
+              </li>
+
+             <li role="presentation"><span id="posts-link">
+                    <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
+                </span><a href="/posts">POSTS</a>
+                </li>
+
+              <li role="presentation"><span id="contact-link">
+                    <img id= "contact" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png" height="36" width="36">
+                </span><a href="contact">CONTACT</a>
+                </li>
+
+                <li> <span id="log_container">
+                    <% if current_user %> 
+                    Logged in as <%= current_user.email %>
+                      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+                      <%= link_to "Log_out", :logout, method: :post %>
+                    <% else %>
+                      <%= link_to "Sign up", signup_path %> or
+                      <%= link_to "Log in", login_path %> 
+                      <% end %>
+              </span>
+              <span>
+                    <%= flash.each do |name, msg| %> 
+                    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                     <% end %>
+              </span></li>
+          </ul>
+        </nav>
+    </div>
+  <body>
+
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
 	
@@ -17,6 +81,7 @@
   <script type="text/javascript" src="posts.js"></script>
 	<script type="text/javascript" src="games.js"></script>
   -->
+
 <%= yield %>
 
 </body>
