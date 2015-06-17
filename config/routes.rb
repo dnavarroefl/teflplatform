@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
    
+  get 'sessions/new' 
+  
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  get "logout" => "sessions#destroy", :as => "logout"
+
   resources :tutors, :students, :posts, :comments, :answers 
   resources :users
+  resources :sessions
   root :to => 'students#home'
-  get '/' => 'students#home' 
+  get '/home' => 'students#home' 
   get '/contact' => 'students#contact'
   get '/media' => 'students#media'
   get '/tools' => 'students#tools'
   get '/posts' => 'posts#index'
   get '/games' => 'students#games'
-
   get '/tutor' => 'tutors#index'
 
   get '/teachers' => 'teachers#index'
