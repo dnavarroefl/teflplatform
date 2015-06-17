@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+
 	def home
 		@students = Student.all
 		@tutors = Tutor.all
