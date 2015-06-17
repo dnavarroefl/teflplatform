@@ -7,7 +7,13 @@
 			<nav id="nav_bar">
 
 				<ul class="nav nav-pills">
-				  <li role="presentation" class="active"><span id="teachers-link">
+
+					<li role="presentation"><span id="home-link">
+											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
+										</span><a href="#">HOME</a>
+									</li>
+
+				  <li role="presentation"><span id="teachers-link">
 											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
 										</span><a href="/teachers">TEACHERS</a>
 									</li>
@@ -24,7 +30,7 @@
 								</li>
 									
 
-				   <li role="presentation"><span id="games-link">
+				   <li role="presentation" class="active"><span id="games-link">
 										<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
 								</span><a href="/games">GAMES</a>
 							</li>
@@ -47,19 +53,9 @@
 	</nav>
 </div>
 
-
 <body>
-			
-	<div id="games-header">
 		
 		<h3 id="matching-title"><img id="match-games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="46" width="46">Matching Game </h3>
-	</div>
-
-	<hr>
-
-	<div id="home-link">
-		<%= link_to 'Home', root_path %>
-	</div>
 
 	<hr>
 			
@@ -71,6 +67,20 @@
 						<tr>
 							<h4 id="game_instructions">Click on all the words associated to the verb</strong> <b>PLAY</b>.<p></h4>
 						</tr>
+				</div>
+					<div class="row">
+						<div class="col-md-6">
+						<div id="score-table">
+							<tr>
+							<th id="score"> YOUR SCORE </th><td>
+									<div id="output">0
+									</div>
+									</td>
+								</tr>
+							</div>
+						</div>
+					</div>
+
 						<tr>
 							<td id="doRight1">football </td> 
 							<td id="doRight2">ball </td> 
@@ -88,16 +98,7 @@
 
 						<hr>
 
-					<div id="score-table">
-							<th id="score"> YOUR SCORE </th>
-								<tr>
-									<td id="player"><b>New Player</b></td>
-									<td>
-									<div id="output">0
-									</div>
-									</td>
-								</tr>
-					</div>
+					
 					</table>
 					</div>
 				</div>

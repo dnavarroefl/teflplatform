@@ -2,7 +2,13 @@
 			<nav id="nav_bar">
 
 				<ul class="nav nav-pills">
-				  <li role="presentation" class="active"><span id="teachers-link">
+
+					<li role="presentation"><span id="home-link">
+											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
+										</span><a href="#">HOME</a>
+									</li>
+
+				  <li role="presentation"><span id="teachers-link">
 											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
 										</span><a href="/teachers">TEACHERS</a>
 									</li>
@@ -23,7 +29,7 @@
 										<img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
 								</span><a href="/games">GAMES</a>
 							</li>
-				    <li role="presentation"><span id="media-link">
+				    <li role="presentation" class="active"><span id="media-link">
 										<img id="media" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="36" width="36">
 								</span><a href="/media">MEDIA</a>
 							</li>
@@ -44,8 +50,6 @@
 
 <h3 id="media-title"><img id="media-new" src="http://icons.iconarchive.com/icons/martz90/hex/256/poweramp-icon.png" height="46" width="46">
  Have fun with the latest media </h3>
-
-<hr>
 
 <div id="home-link">
 <%= link_to 'Home', root_path %><br>
@@ -75,7 +79,7 @@
 				<th> Latest videos </th> 
 				<tr>
 					<td>
-						<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ZbNKTOXUVow?list=PL5146C9A4FD908B6D" frameborder="0" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item" width="560" height="315" style="border: 1px solid #49CBD6" src="https://www.youtube.com/embed/ZbNKTOXUVow?list=PL5146C9A4FD908B6D" frameborder="0" allowfullscreen></iframe>
 					</td>
 				</tr>
 			</table>
@@ -88,7 +92,7 @@
 				<th> Latest podcasts </th> 
 				<tr>
 					<td>
-						<iframe src="http://www.ivoox.com/player_es_podcast_17685_1.html" width="100%" style="border: 1px solid #D7D7D7;" height="440" frameborder="0" allowfullscreen="0" scrolling="no" ></iframe>
+						<iframe src="http://www.ivoox.com/player_es_podcast_17685_1.html" width="100%" style="border: 1px solid #49CBD6" height="440" frameborder="0" allowfullscreen="0" scrolling="no" ></iframe>
 					</td>
 				</tr>
 			</table>

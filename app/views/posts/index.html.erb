@@ -7,7 +7,13 @@
       <nav id="nav_bar">
 
         <ul class="nav nav-pills">
-          <li role="presentation" class="active"><span id="teachers-link">
+
+          <li role="presentation"><span id="home-link">
+                      <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
+                    </span><a href="#">HOME</a>
+                  </li>
+
+          <li role="presentation"><span id="teachers-link">
                       <img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
                     </span><a href="/teachers">TEACHERS</a>
                   </li>
@@ -18,12 +24,10 @@
                 </li>
       
           <li role="presentation"><span id="tools-link">
-                    <img id="tools" src="http://icons.iconarchive.
-                    com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
+                    <img id="tools" src="http://icons.iconarchive.com/icons/martz90/hex/256/duolingo-icon.png" height="36" width="36">
                   </span><a href="/tools">TOOLS</a>
                 </li>
                   
-
            <li role="presentation"><span id="games-link">
                     <img id="games" src="http://icons.iconarchive.com/icons/martz90/hex/256/gamehub-icon.png" height="36" width="36">
                 </span><a href="/games">GAMES</a>
@@ -33,7 +37,7 @@
                 </span><a href="/media">MEDIA</a>
               </li>
 
-             <li role="presentation"><span id="posts-link">
+             <li role="presentation" class="active"><span id="posts-link">
                     <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36">
                 </span><a href="/posts">POSTS</a>
                 </li>
@@ -52,12 +56,6 @@
       <span id="recent-posts-header">
        <h3 id="post-title"> <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36"> Recent Posts </h3>
       </span>
-
-      <hr>
-
-      <div id="home-link">
-      <%= link_to 'Home', root_path %>
-      </div>
 
       <hr>
 
@@ -115,7 +113,6 @@
           </div>
           <% end %>
 </div>
-
 
     <script type="text/javascript">
 

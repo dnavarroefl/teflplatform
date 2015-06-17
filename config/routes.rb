@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-    
+   
+  resources :tutors, :students, :posts, :comments, :answers 
+  resources :users
   root :to => 'students#home'
   get '/' => 'students#home' 
   get '/contact' => 'students#contact'
@@ -24,7 +26,5 @@ Rails.application.routes.draw do
   post 'students/new' => 'students#create'
   post 'posts/new' => 'posts#create'
   post 'comments/new' => 'comments#create'
-  post 'contact/new' => 'comments#create'
-
-  resources :tutors, :students, :posts, :comments, :answers
+  post 'contact/new' => 'comments#create' 
 end

@@ -2,6 +2,12 @@
 			<nav id="nav_bar">
 
 				<ul class="nav nav-pills">
+
+					<li role="presentation"><span id="home-link">
+											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/browser-icon.png" height="36" width="36">
+										</span><a href="#">HOME</a>
+									</li>
+
 				  <li role="presentation" class="active"><span id="teachers-link">
 											<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="36" width="36">
 										</span><a href="/teachers">TEACHERS</a>
@@ -47,7 +53,6 @@
 
 <hr>
 <div id="home-link">
-	<%= link_to 'Home', root_path %> / 
 	<%= link_to 'Class Interaction', controller: "tutors", action:"index" %> / 
 	<a href="/duolingo/dashboard">Duolingo Dashboard</a>
 </div>
