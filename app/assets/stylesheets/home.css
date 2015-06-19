@@ -1,36 +1,25 @@
 /*Home CSS*/
 
-
-
 html {
    height: 100%; 
 }
 
-div#top-bar {
+img#tefl-logo {
+   margin-top: -18px; 
+}
+
+nav.navbar {
    position: fixed; 
    top: 0; 
    left: 0; 
    width: 100%; 
-   height: 80px;  
+   height: 70px;  
    background-color: #49CBD6;  
    padding: 10px;
 }
 
-div#home-header { 
-   width: 250px; 
-   margin-top: 5%; 
-   padding: 1px; 
-   text-align: center; 
-   background-color: #49CBD6;  
-   box-shadow: 0 0 1em black;
-   border-radius: 20px 20px 20px 20px; 
-}
-
-span#log_container {
- background-color: #49CBD6;
- box-shadow: 0 0 1em black;
- border-radius: 20px 20px 20px 20px;
- padding: 10px;  
+nav#log_container {
+   margin-left: 100px; 
 }
 
 form{
@@ -39,7 +28,7 @@ form{
 
 h1#platform-name {  
    text-align: center; 
-   margin-top: 10%;
+   margin-top: 1%;
    margin-left: 10%; 
    margin-right: 10%;
    padding:10px; 
@@ -48,7 +37,8 @@ h1#platform-name {
 } 
 
 #welcome {
-   text-align: center; 
+  padding-top: 10px;
+  padding-bottom: 10px; 
 }
 
 div#motto {
@@ -62,7 +52,6 @@ div#motto {
 
 button#like-button {  
    background-color: #49CBD6;
-   
 }
 
 a:hover {
@@ -73,9 +62,10 @@ h3#latest_post, h3#latest_feedback{
    padding: 10px;
 }
 
-table#post-comments-home {
+table#post-comments {
    margin-top: 10px;  
    background-color: #49CBD6;
+    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
 }
 
@@ -83,19 +73,11 @@ body {
    font-family: verdana; 
    width: 1024;
    height: 600px; 
-   margin-top: 10%; 
+   margin-top: 5%; 
    margin-right: 10%; 
    margin-left: 10%; 
    margin-bottom: 10%; 
 } 
-
-nav > img{
-   float: auto; 
-   margin-top: 20px;
-   margin-bottom: 20px; 
-   margin-right: -40px; 
-   margin-left: 30px; 
-}
 
 span > a {
    font-style: georgia; 
@@ -104,11 +86,6 @@ span > a {
    color: black; 
 }
 
-#nav_bar{ 
-   text-align: center; 
-   margin-left: 5%; 
-   margin-right: 5%; 
-}
 
 #like-button {
    padding: 4px; 
@@ -121,22 +98,22 @@ span > a {
 
 /*Posts, comments & feedback CSS*/
 
-table#posts {
-   
+table#posts {   
    margin-right: 20px;
    margin-left: 20px;
+   box-shadow: 0 0 1em black;
    border-radius: 20px 30px 30px 20px;
 }
 
 
 h3#post-title {
-  width: 50%; 
+   width: 50%; 
    text-align: center; 
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
    padding: 3px; 
-   margin-top: 100px; 
+   margin-top: 10px; 
    margin-left: 300px;
 
 }
@@ -157,27 +134,16 @@ div#comments-content {
    margin-bottom: 10px; 
 }
 
-img#post-its {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-   margin-left: 700px;
-   margin-top: 755px; 
-   margin-bottom: 20px; 
-   border-radius: 20px 20px 20px 20px; 
-} 
-
 /* Headers & Titles */
 
-h1#students-wall, h3#matching-title, h1#student-title, h3#media-title {
+h1#students-wall, h3#matching-title, h1#student-title, h3#media-title, h3#post-title, h3#title-tutor, h3#teachers-title  {
    width: 50%; 
    text-align: center; 
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
    padding: 3px; 
-   margin-top: 100px; 
+   margin-top: 10px; 
    margin-left: 250px;  
 }
 
@@ -195,13 +161,13 @@ td#doRight,td#doWrong {
 /*Tools CSS*/
 
 h3#tools-title {
-    width: 50%; 
+   width: 50%; 
    text-align: center; 
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
-   padding: 3px; 
-   margin-top: 100px; 
+   padding: 10px; 
+   margin-top: 10px; 
    margin-left: 250px;  
 }
 
@@ -235,10 +201,14 @@ div#dropbox_container  {
 
 h3#title, h3#media-title, h3#post-title { 
    width: 50%; 
-   margin-left: 5px; 
+   margin-left: 5px;
    background-color: #49CBD6;  
    box-shadow: 0 0 1em black;
    border-radius: 20px 20px 20px 20px; 
+}
+
+h4#media-subheader {
+   padding: 20px; 
 }
 
 img#media-new {
@@ -256,38 +226,18 @@ table#ivoox-table {
 
 /*Teacher & Tutor CSS*/ 
 
-h3#teachers-title {
+h3#teachers-title2 {
    width: 50%; 
    text-align: center; 
-   background-color: #49CBD6;  
-   box-shadow: 0 0 1em black;
-   border-radius: 20px 20px 20px 20px; 
    padding: 3px; 
-   margin-top: 100px; 
    margin-left: 250px;
 }
 
-div#tutors-header {
-}
-
-h3#title-tutor {
-   width: 50%; 
-   margin-top: 100px;
-   margin-left: 150px; 
-   background-color: #49CBD6;  
-   box-shadow: 0 0 1em black;
-   border-radius: 20px 20px 20px 20px; 
-}
-
-h3#teachers-title2 {
-   width: 50%; 
-   margin-left: 350px;
-   margin-bottom: 20px; 
-}
-
 div#issuu-reading {
+   box-shadow: 0 0 1em black;
    margin-left: 25%;
    margin-right: 25%;
+   margin-top: 2%; 
 }
 
 table#tutor-feedback, table#tutor-table {
@@ -332,6 +282,10 @@ div#back_link {
 }
 
 footer { 
-   text-align: center; 
+   text-align: center;
+   width: 100%; 
+   height: 40px;  
+   padding: 10px;
    font-size: 14px; 
+   margin-top: 20px; 
 }
