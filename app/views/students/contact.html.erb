@@ -12,12 +12,13 @@
   <p>
   	<table id="tutor-table">
 
-      <th> Contact info </th>
-      <td><img id="tutor-profile" width="50px" height="50px" src="https://avatars3.githubusercontent.com/u/11841774?v=3&s=460"></td>
+      <td><img id="tutor-profile" width="100px" height="100px" src="https://avatars3.githubusercontent.com/u/11841774?v=3&s=460"></td>
+
+    <th> Contact info </th>
   		<td><%= tutor.name %></td>
   		<td>Email: <%= tutor.email %></td>
       <td>
-        <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="36"height="36" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png"></a></div>Send Email</td>
+        <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="46"height="46" src="http://icons.iconarchive.com/icons/martz90/hex/256/email-2-icon.png"></a></div>Send Email</td>
       <td>
         <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
             <div id="SkypeButton_Call_deivy.mc_1">
@@ -36,29 +37,6 @@
 
   <script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 
-  <table id="post-comments">
-
-    <th> Send feedback: </th>
-    <tr>
-      <td>
-        <%= form_for :comment, url: comments_path do |f| %>
-          <p>
-            <%= f.label :name %><br>
-            <%= f.text_field :name %>
-          </p>
-
-        <p>
-          <%= f.label :text %><br>
-          <%= f.text_area :text %>
-        </p>
-
-          <p>
-            <%= f.submit %>
-          </p>
-        <% end %>
-      </td>
-    </tr>
-  </table>
 </body>
 </html>
 

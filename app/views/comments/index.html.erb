@@ -1,13 +1,9 @@
-<h1 id="students-wall"> Students' Wall </h1>
+<h1 id="students-wall"> Comments </h1>
 
-<hr>
-<div id="home-link">
-<%= link_to 'Home', root_path %>
-</div>
 <hr>
 
 <div id="comments_home">
-									<h3 id="latest_feedback">Latest feedback</h3>
+									<h3 id="latest_feedback">Latest comments</h3>
 										<% @comments.each do |comment| %> 
 										<table id="table_comments">
 												<tr>
@@ -21,6 +17,7 @@
 															<td><%= comment.title %></td> 
 															<td><%= comment.name %></td>
 															<td><%= comment.text %></td>
+															<td><%= comment.created_at %></td>
 															
 															<td><button type='button' id='like-button'> Like </button></td>
 															<td id="likes"></td>
