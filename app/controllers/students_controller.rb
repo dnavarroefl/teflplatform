@@ -1,16 +1,16 @@
 class StudentsController < ApplicationController
-
+	
 	def home
 		@students = Student.all
 		@tutors = Tutor.all
-		@posts = Post.all
+		@posts = Post.order("created_at DESC").limit(3)
 		@comments = Comment.all
 		@answers = Answer.all
 	end 
 
 	def index
 		@students = Student.all 
-		@tutors = Tutor.all
+		@tutors = Tutor.all	
 	end 
 
 	def show
@@ -27,6 +27,7 @@ class StudentsController < ApplicationController
 	def contact
 		@students = Student.all
 		@tutors = Tutor.all
+		@comments = Comment.all
 	end 
 
 	def media

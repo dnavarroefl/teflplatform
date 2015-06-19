@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 
 	def index
+		@posts = Post.all
 		@comments = Comment.all
 		@tutors = Tutor.all 
 		@students = Student.all
@@ -19,9 +20,9 @@ class CommentsController < ApplicationController
 	end 
 
 	def create
-		@comment = Comment.new(comment_params)
-     	@comment.save
-     	redirect_to comment_path(@comment)
+		@post = Post.find(params[:id])
+     	@comment = @post.comments.create(comment_params)
+     	redirect_to post_path(@post)
 	end 
 
 	def update
