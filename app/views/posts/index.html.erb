@@ -6,7 +6,7 @@
 <body>
 
       <span id="recent-posts-header">
-       <h3 id="post-title"> <img id="posts" src="http://icons.iconarchive.com/icons/martz90/hex/256/wordpress-icon.png" height="36" width="36"> Recent Posts </h3>
+       <h3 id="post-title"> Recent Posts </h3>
       </span>
 
       <hr>
@@ -23,11 +23,12 @@
           <tr>
             <td><%= post.title %></td>
           </tr>
+           <tr>
+             <td>Posted on <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
+            </td>
+          </tr>
           <tr>
         		<td><%= post.text %></td>
-          </tr>
-             <tr>
-             <td>Posted on <%= post.created_at %></td>
           </tr>
           <tr>  
             <td><button type='button' id='like-button'> Like </button></td>

@@ -11,73 +11,81 @@
   <%= csrf_meta_tags %>
 </head>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
       <div class="container-fluid">
-        
-            <ul class="nav nav-pills">
-              
-              <li role="presentation" >
+
+        <ul>
                 <div class="navbar-header">
                   <a class="navbar-brand" href="/home">
-                    <img alt="TEFL" src="/tefl_logo.jpg">
+                    <img id="tefl-logo" alt="TEFL" width="36" height="36" src="">
                   </a>
               </div>
+        </ul>
+
+            <ul class="nav nav-pills pull-right">
                         </li>
 
                 <li role="presentation"> <span id="teachers-link">
-                          </span><a href="/teachers">TEACHERS</a>
+                          </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/teachers">TEACHERS</a>
                         </li>
 
                 <li role="presentation"><span id="student-link">
-                        </span><a href="/students">STUDENTS</a>
+                        </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/students">STUDENTS</a>
                       </li>
             
                 <li role="presentation"><span id="tools-link">
-                        </span><a href="/tools">TOOLS</a>
+                        </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/tools">TOOLS</a>
                       </li>
                         
                  <li role="presentation"><span id="games-link">
-                      </span><a href="/games">GAMES</a>
+                      </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/games">GAMES</a>
                     </li>
                   <li role="presentation"><span id="media-link">
-                      </span><a href="/media">MEDIA</a>
+                      </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/media">MEDIA</a>
                     </li>
 
                    <li role="presentation"><span id="posts-link">
-                      </span><a href="/posts">POSTS</a>
+                      </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/posts">POSTS</a>
                       </li>
 
                     <li role="presentation"><span id="contact-link">
-                      </span><a href="contact">CONTACT</a>
+                      </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="contact">CONTACT</a>
                       </li>
-                </ul>
-        </nav>
+                    </ul>
+                  </nav>
 
-        <nav id="log_container">
-              <span id="log_container">
-                        <% if current_user %> 
-                        Logged in as <%= current_user.email %>
-                          <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-                          <%= link_to "Log_out", :logout, method: :post %>
-                        <% else %>
-                           <%= link_to "Sign up", signup_path %>
-                         
-                          or
-                          <%= link_to "Log in", login_path %> 
+                  <nav id="log_container">
+                    <span id="log_container">
+                      <ul class="pager">
+                              <% if current_user %> 
+                              Logged in as <%= current_user.email %><br>
+                               <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
+                               <%= link_to "Log out", :logout, method: :post %>
+                              <% else %>
+                                <%= link_to "Sign up", signup_path %>
+                                or
+                               <%= link_to "Log in", login_path %>
+                              </ul>
+                            </span>
                           <% end %>
-                  </span>
-                  <span>
-                        <%= flash.each do |name, msg| %> 
-                        <%= content_tag :div, msg, :id => "flash_{name}" %>
-                         <% end %>
-                  </span>
-            </nav>
+                        
+                      <span id="log_container">
+                            <%= flash.each do |name, msg| %> 
+                            <%= content_tag :div, msg, :id => "flash#{name}" %>
+                             <% end %>
+                      </span>
+                  </nav>
+                </nav>
       </div>
     </div>
-  <body>
 
- 
-  <hr>            
+<body>
+<div class= "navbar navbar-default navbar-fixed-bottom">
+  <div class= "container">
+     <p class= "navbar-text"> © 2015, TEFL </p>
+  </div>
+</div> 
+           
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
 	
@@ -87,9 +95,6 @@
   -->
 
 <%= yield %>
-<footer>
-      © TEFL, 2015
-</footer>
 </body>
 
 </html>

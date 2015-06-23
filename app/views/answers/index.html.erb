@@ -1,11 +1,5 @@
 <h1 id="students-wall"> Answers </h1>
-
 <hr>
-<div id="home-link">
-<%= link_to 'Home', root_path %>
-</div>
-<hr>
-
 <div id="answers_home">
 									<h3 id="latest_feedback">Latest feedback</h3>
 										<% @answers.each do |answer| %> 
@@ -18,9 +12,11 @@
 
 												<div id="answers-content">
 														<tr>
-															<td><%= answer.title %></td> 
+															<td><%= answer.title %><br>
+															  	<%= answer.created_at %></td> 
 															<td><%= answer.name %></td>
 															<td><%= answer.text %></td>
+
 															
 															<td><button type='button' id='like-button'> Like </button></td>
 															<td id="likes"></td>
