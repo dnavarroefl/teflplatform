@@ -8,8 +8,11 @@ Rails.application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
   resources :users
+
+  get "users/:id/contact" => redirect("/contact")
+
   resources :sessions
-  root :to => 'students#home'
+  root :to => 'sessions#new'
 
   # Rutas para los usuarios y su interacción (posts, respuestas y comentarios)
 
@@ -26,10 +29,13 @@ Rails.application.routes.draw do
   get '/media' => 'students#media'
   get '/tools' => 'students#tools'
   get '/posts' => 'posts#index'
+  get '/comments' => 'comments#index'
   get '/games' => 'students#games'
   get '/tutor' => 'tutors#index'
 
   get '/teachers' => 'teachers#index'
+
+  get '/busyteacher' => redirect("http://www.busyteacher.org/")
 
   # Rutas para las herramientas conectadas a nuestra plataforma
 
