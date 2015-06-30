@@ -1,3 +1,5 @@
+
+
 $('td#doRight').on('click', function() {
 	alert('Correct!');
 });

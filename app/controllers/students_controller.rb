@@ -14,8 +14,8 @@ class StudentsController < ApplicationController
 	end 
 
 	def show
-		@student = Student.find params[:id]
-		@tutor = Tutor.find params[:id]
+		@student = Student.find(params[:id])
+		@tutor = Tutor.find(params[:id])
 	end 
 
 	def create 
@@ -23,6 +23,16 @@ class StudentsController < ApplicationController
 		@student.save
 		redirect_to 'students_path'
 	end 
+
+	def edit
+		 @student = Student.find(params[:id])
+	end 
+
+	 def update
+	  @student = Student.find(params[:id])
+	  @student.update(student_params)
+	  redirect_to student_path(@student)
+	  end 
 
 	def contact
 		@students = Student.all

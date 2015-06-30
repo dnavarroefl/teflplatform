@@ -1,12 +1,12 @@
 class AnswersController < ApplicationController
 
 	def home
-		@answers = Answer.all
+		@answers = Answer.order("created_at DESC").limit(3)
 		@students = Student.all
 	end 
 
 	def index
-		@answers = Answer.all
+		@answers = Answer.order("created_at DESC").limit(3)
 		@tutors = Tutor.all 
 		@students = Student.all
 	end 

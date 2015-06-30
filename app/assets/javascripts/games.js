@@ -1,7 +1,8 @@
-
+$(document).ready()
 $('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').click(function() {
 	    $('#output').html(function(i, val) { return val*1+1 });
 	});
+		$('#output').empty();
 
 	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
 		alert('Correct!');

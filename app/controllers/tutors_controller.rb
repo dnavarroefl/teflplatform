@@ -4,6 +4,7 @@ class TutorsController < ApplicationController
 		@students = Student.all
 		@posts = Post.all
 		@comments = Comment.all
+		@answers = Answer.all
 	end 
 
 	def index
@@ -11,6 +12,7 @@ class TutorsController < ApplicationController
 		@students = Student.all
 		@posts = Post.all
 		@comments = Comment.all
+		@answers = Answer.all
 	end 
 
 	def show
