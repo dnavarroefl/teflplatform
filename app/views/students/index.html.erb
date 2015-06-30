@@ -6,7 +6,7 @@
 <body>
 	
 <span id="student-header">
-	<h1 id="student-title"><img id="student-header" src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="46" width="46"> Your Class </h1>
+	<h2 id="student-title"><img id="student-header" src="/images/students.png" height="46" width="46"> Your Class </h2>
 </span>
 
 <hr>
@@ -17,7 +17,7 @@
 	<table>
 		<tr>
 			<th><b><%= student.name %></b></th>
-			<td><img src="http://icons.iconarchive.com/icons/martz90/hex/256/favourites-icon.png" height="46" width="46"></td>
+			<td><img src="/images/students.png" height="46" width="46"></td>
 			
 			<td><b>Email:</b> <%= student.email %></td>
 			<td><b>Age:</b> <%= student.age %></td>
@@ -27,12 +27,17 @@
 			<td>Score: <%= student.score %></td>
 			<td>Comment: <%= student.comment %></td>
 		-->
+		<% end %> 
 		</tr>
 	</table><br>
-
-	<% end %> 
+</div>
 	</p>
 </div>
+
+<div id="pager-edit">
+	<ul class="pager">
+	      <li><a href="/home">Back</a></li> 
+	 </ul>
 
 </body>
 </html>

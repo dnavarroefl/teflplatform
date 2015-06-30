@@ -3,6 +3,7 @@
 <head>
   <title>Tefl Platform</title>
   <link rel="stylesheet" type="text/css" href="home.css">
+  <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <meta charset="utf-8">
 
@@ -11,13 +12,13 @@
   <%= csrf_meta_tags %>
 </head>
 
-    <nav class="navbar navbar-fixed-top">
-      <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
 
         <ul>
                 <div class="navbar-header">
                   <a class="navbar-brand" href="/home">
-                    <img id="tefl-logo" alt="TEFL" width="36" height="36" src="">
+                    <img id="tefl-logo" alt="TEFL" width="36" height="36" src="tefl_logo.jpg">
                   </a>
               </div>
         </ul>
@@ -53,8 +54,9 @@
                       </li>
                     </ul>
                   </nav>
+                </div>
 
-                  <nav id="log_container">
+                  <nav id="log-container">
                     <span id="log_container">
                       <ul class="pager">
                               <% if current_user %> 
@@ -71,21 +73,19 @@
                         
                       <span id="log_container">
                             <%= flash.each do |name, msg| %> 
-                            <%= content_tag :div, msg, :id => "flash#{name}" %>
+                            <%= content_tag :div, msg, :id => "flash#name" %>
                              <% end %>
                       </span>
+
                   </nav>
                 </nav>
+              </div>
+                <hr>
       </div>
     </div>
 
 <body>
-<div class= "navbar navbar-default navbar-fixed-bottom">
-  <div class= "container">
-     <p class= "navbar-text"> © 2015, TEFL </p>
-  </div>
-</div> 
-           
+     
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
 	
@@ -97,4 +97,9 @@
 <%= yield %>
 </body>
 
+<div class="container">
+  <div id="wrap">
+  <footer class="fixed-bottom">® TEFL, 2015</footer>
+  </div>
+</div>
 </html>

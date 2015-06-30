@@ -1,19 +1,18 @@
-<h1> Student info </h1>
+<h2> Student info </h2>
 
-<p> 
-	<% @students.each do |student| %>
-
-<table>
-<tr>
-	Welcome, <%= student.name %>!<br>
-
-	<li>Age: <%= student.age %></li>
-	<li>Level: <%= student.level %></li>
-	<li>Progress: <% student.progress %></li>
-	<li>Score: <% student.score %></li><br>
-</tr>
+<table id="post-comments">
+	<tr>
+		Welcome, <%= @student.name %>!<br>
+		<ul>
+			<li>Age: <%= @student.age %></li>
+			<li>Level: <%= @student.level %></li>
+		</ul>
+		</tr>
 </table>
 
-<% end %> 
+<p>
+    <%= link_to 'Edit', edit_student_path(@student)%> |
+    <%= link_to 'Back', students_path%>
 </p>
+
 

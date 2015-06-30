@@ -1,7 +1,4 @@
 
-<table>
-  <tr>
-    <td>
       <%= form_for :post, url: post_path(@post), method: :patch do |f| %>
         <p>
           <%= f.label :title %><br>
@@ -17,9 +14,7 @@
           <%= f.submit %>
         </p>
       <% end %>
-    </td>
-  </tr>
-</table>
+
 
 <hr>
 

@@ -1,5 +1,5 @@
 
-<h2> Posts </h2>
+<h2> Posts </h2><br>
  
 		 <p>
 		  <strong>Title:</strong>
@@ -15,37 +15,6 @@
 		  <strong>Text:</strong>
 		  <%= @post.text %>
 		</p>
-
-<h2> Comments </h2>
-
-<% @post.comments.each do |comment| %> 
-<p> 
-	<strong>Name:</strong>
-	<%= comment.name %>
-</p>
-
-<p> 
-	<strong>Text:</strong>
-	<%= comment.text %>
-</p>
-
-<% end %>
-
- <h2> Add a comment: </h2> 
-
- <%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %> 
 
 <hr> 
 

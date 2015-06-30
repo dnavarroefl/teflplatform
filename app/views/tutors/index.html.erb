@@ -1,7 +1,7 @@
 
 <div id="tutors-header">
 	
-	<h1 id="tutors-title"><img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46"> Tutor's Index </h1>
+	<h1 id="tutors-title"><img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46"> Your class info & activity at a glance </h1>
 </div>
 
 <hr>
@@ -29,8 +29,8 @@
 							<td><%= student.name %></td>
 					    	<td><%= student.age %></td>
 							<td><%= student.level %></td>
+							<td><%= link_to 'Edit Student', edit_student_path(student) %></td>
 						</tr>
-
 						<% end %>
 					</table><br>
 				</div>
@@ -46,6 +46,7 @@
 						    <th>Name</th>
 								<th>Title</th>
 								<th>Text</th>
+								<th>Created at</th>
 							</tr>
 						</div>
 
@@ -55,9 +56,11 @@
 						    <td><%= comment.name %></td>
 								<td><%= comment.title %></td>
 								<td><%= comment.text %></td>
+								<td><%= comment.created_at %></td>
 							</tr>
 
 							<% end %>
+							
 						</table><br>
 					</div>
 				</div>
@@ -72,6 +75,7 @@
 					    	<th>Name</th>
 							<th>Title</th>
 							<th>Text</th>
+							<th>Created at </th>
 						</tr>
 					</div>
 
@@ -81,6 +85,7 @@
 					    	<td><%= post.name %></td>
 							<td><%= post.title %></td>
 							<td><%= post.text %></td>
+							<td><%= post.created_at %></td>
 						</tr>
 
 						<% end %>
@@ -88,4 +93,10 @@
 				</div>
 		</div>
 	</div>
+</div>
+
+<div id="pager-edit">
+	<ul class="pager">
+	      <li><a href="/tutors">Back</a></li> 
+	 </ul>
 </div>

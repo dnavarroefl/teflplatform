@@ -1,44 +1,52 @@
 <h1 id="students-wall"> Answers </h1>
 <hr>
 <div id="answers_home">
-									<h3 id="latest_feedback">Latest feedback</h3>
-										<% @answers.each do |answer| %> 
-										<table id="table_answers">
-												<tr>
-													<th>Title</th>
-													<th>Name</th>
-													<th>Text</th>
-												</tr>
 
-												<div id="answers-content">
-														<tr>
-															<td><%= answer.title %><br>
-															  	<%= answer.created_at %></td> 
-															<td><%= answer.name %></td>
-															<td><%= answer.text %></td>
+<article>
+<h3 class= "recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Answers </h3>
 
-															
-															<td><button type='button' id='like-button'> Like </button></td>
-															<td id="likes"></td>
-														</tr>
-													</div>
-												</table>
-												
-											<% end %>
-							</div>
-					</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table> 
+        <div id="posts-content">
+               <% @answers.each do |answer| %> 
 
-<script type="text/javascript">
+              <tr>
+                <th><h4 id="post-title"><%= answer.title %><h4></th>
+              </tr>
+              <tr>
+                <td>By: <b><%= answer.name %></b></td>
+              </tr>
+              <tr>  
+                <td>Replied on: <%= answer.created_at.mday %>/<%= answer.created_at.month %>/<%= answer.created_at.year %>
+                </td>
+              </tr>
+              <tr>
+              
+                <td><%= answer.text %></td>
+              </tr>  
+              <tr>
+                <td><a href="/answers/new"><input type="button" value="Reply"></a>
+                <button type='button' id='like-button'> Like </button>
+                                          <td id="likes">
+                                          </td>
+              </tr>
+                   <% end %>
+             </div>
+        </table>
+	</div>
+	</div>
+</div>
 
-	$('button#like-button').on('click', function() {
-		alert('Thanks for your support!');
-	});
+<ul class="pager">
+<li><a href="/home">Back</a></li>
+</ul>
 
-/* Contador de likes para cada comentario y post
+ <script type="text/javascript">
 
-	$('button#like-button').on('click', function() {
-	    $('#likes').html(function(i, val) { return val*1+1 });
-	});
-*/
+        $('button#like-button').on('click', function() {
+          alert('Thanks for your support!');
+        });
+    </script>
 
-</script>
