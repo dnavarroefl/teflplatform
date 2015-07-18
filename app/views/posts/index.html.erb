@@ -13,8 +13,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <table> 
         <div id="posts-content">
+          <table> 
                <% @posts.each do |post| %> 
 
               <tr>
@@ -32,14 +32,16 @@
                 <td><%= post.text %></td>
               </tr>  
               <tr>
-                <td><a href="/answers/new"><input type="button" value="Reply"></a>
+                <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
                 <button type='button' id='like-button'> Like </button>
                                           <td id="likes">
                                           </td>
               </tr>
+
                    <% end %>
+                   </table>
              </div>
-        </table>
+        
 
   
         </div>

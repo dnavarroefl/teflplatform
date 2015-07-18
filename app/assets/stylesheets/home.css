@@ -1,5 +1,13 @@
 /*Home CSS*/
 
+
+
+
+
+
+
+
+
 html {
    height: 100%; 
 }
@@ -8,17 +16,17 @@ img#tefl-logo {
    color: black; 
    font-size: 18px; 
    font-family: Oxygen; 
-   margin-top: auto;    
+   margin-top: -10px;   
 }
 
 a.btn.btn-navbar {
-   font-size: 18px; 
+   position: relative; 
+   font-size: 14px; 
    font-family: Oxygen; 
-   margin-top: -10px; 
+   margin-top: -5px; 
 }
 
-nav.navbar {
-
+nav.navbar { 
    position: fixed; 
    top: 0; 
    left: 0; 
@@ -26,30 +34,42 @@ nav.navbar {
    height: 60px;  
    background-color: #49CBD6;  
    padding: 10px;
-    box-shadow: 0 0 1em black;
+   box-shadow: 0 0 1em grey;
 }
 
-nav#log_container, ul.pager {
-  
+span#log_container  {
+  position: relative; 
   font-family: Oxygen; 
-  margin-left: 30px; 
+  margin-left: -30px; 
   padding-top: 20px; 
   padding-bottom: 10px; 
 }
 
-div#pager-edit {
-   margin-left: 45%; 
+ul.pager {
+   margin-left: -70px
+   
 }
 
-.navbar-brand:hover {
- background: #EEEEEE;
+h3.next-trails {
+   margin-left: 90px;
+   margin-bottom: 30px; 
+}
+
+aside.next-trails {
+   margin-left: 300px;
+   margin-top: -190px;
+   margin-bottom: 100px
+}
+
+div#pager-edit {
+   margin-left: 0%; 
 }
 
 h3.session-title, h3#signup-title {
    font-size: 35px; 
    font-family: Oxygen; 
    color: black; 
-   margin-left: 40%; 
+   margin-left: 35%; 
 }
 
 h3#feedback-title {
@@ -88,15 +108,14 @@ img.img-responsive {
    
 }
 
-h1#platform-name {  
+h3#platform-name {  
    text-align: center; 
    color: #49CBD6;
-   margin-top: 5px; 
+   margin-top: 0px; 
    margin-left: 10%; 
    margin-right: 10%;
-   padding:10px; 
    font-family: Oxygen; 
-   font-size: 60px;
+   font-size: 50px;
 } 
 
 p.motto {
@@ -108,12 +127,12 @@ p.motto {
    font-size: 25px; 
 }
 
-h3.recent-posts-header {
-   padding-top: 50px; 
-}
-
 button#like-button {  
    font-style: Oxygen; 
+}
+
+h3.recent-posts-header {
+   text-align: center; 
 }
 
 h3#latest_post, h3#latest_feedback{
@@ -122,6 +141,8 @@ h3#latest_post, h3#latest_feedback{
 
 h4#post-title {
    margin-right: 100%;
+   color: #49CBD6;
+   
 }
 
 table#post-comments {
@@ -136,6 +157,7 @@ table#post-comments {
 div.fb-comments {
    position: relative;
    margin-left: 25%;
+   margin-top: -70px;
    margin-bottom: 10%
 }
 
@@ -178,12 +200,14 @@ h2#post-title {
 
 div#posts-content {
    margin: 10px;
+   margin-left: 15%; 
+   margin-right: 15%;
    font-style: Oxygen; 
    font-size: 16px; 
 }
 
 ul.pager {
-   text-align: left; 
+   text-align: auto; 
 }
 
 table#post-comments {
@@ -201,14 +225,15 @@ div#comments-content {
 
 /* Headers & Titles */
 
-h1#students-wall, h2#matching-title, h3#media-title, h3#post-title, h2#title-tutor, h2#teachers-title, h3#tools-title, h1#tutors-title, h4#teachers-title  {
+h1#students-wall, h2#matching-title, h3#media-title, h3#post-title, h2#title-tutor, h2#teachers-title, h3#tools-title, h1#tutors-title, h4#teachers-title, h2.recent-posts-header  {
    
    width: 50%; 
    font-style: Oxygen; 
    font-size: 30px; 
    text-align: center; 
    padding: 3px; 
-   margin-left: 250px;  
+   margin-left: 25%;  
+   margin-top: 0px;
 }
 
 h2#student-title {
@@ -227,6 +252,7 @@ img#match-games {
 h4#game_instructions {
    text-align: center; 
    font-style: Oxygen; 
+   padding-bottom: 10px;
 }
 
 td#doRight,td#doWrong {
@@ -306,12 +332,10 @@ img#media-new {
 
 iframe {
    margin-top: 50px; 
-   position: relative; 
-   
 }
 
-div#spotify-container {
-   margin-bottom: 20px; 
+div#spotify_container {
+   margin-bottom: 50px; 
 }
 
 /*Teacher & Tutor CSS*/ 
@@ -347,14 +371,15 @@ div.contact-info {
 /*Tables style*/
 
 th {
+   
    text-align: center; 
    font-size: 14px; 
-   padding: 30px;
+   padding: 10px;
 }
 
 tr {
    margin-left: 5%;
-   padding: 20px; 
+   padding: 15px; 
    
 }
 

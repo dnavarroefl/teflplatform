@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tefl Platform</title>
+  <title>Tefl Hiking</title>
   <link rel="stylesheet" type="text/css" href="home.css">
   <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -18,12 +18,16 @@
         <ul>
                 <div class="navbar-header">
                   <a class="navbar-brand" href="/home">
-                    <img id="tefl-logo" alt="TEFL" width="36" height="36" src="tefl_logo.jpg">
+                    <img id="tefl-logo" alt="TEFL" width="36" height="36" src="/images/tefl_logo.jpg">
                   </a>
               </div>
         </ul>
 
             <ul class="nav nav-pills pull-right">
+                        </li>
+
+                 <li role="presentation"> <span id="home-link">
+                          </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/home">HOME</a>
                         </li>
 
                 <li role="presentation"> <span id="teachers-link">
@@ -57,30 +61,28 @@
                 </div>
 
                   <nav id="log-container">
-                    <span id="log_container">
-                      <ul class="pager">
-                              <% if current_user %> 
-                              Logged in as <%= current_user.email %><br>
-                               <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
-                               <%= link_to "Log out", :logout, method: :post %>
-                              <% else %>
-                                <%= link_to "Sign up", signup_path %>
-                                or
-                               <%= link_to "Log in", login_path %>
-                              </ul>
-                            </span>
-                          <% end %>
-                        
                       <span id="log_container">
-                            <%= flash.each do |name, msg| %> 
-                            <%= content_tag :div, msg, :id => "flash#name" %>
-                             <% end %>
-                      </span>
-
-                  </nav>
+                              <div class="container">
+                                <% if current_user %> 
+                                Logged in as <%= current_user.email %><br>
+                                 <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
+                                 <%= link_to "Log out", :logout, method: :post %>
+                                <% else %>
+                                  <%= link_to "Sign up", signup_path %>
+                                  or
+                                 <%= link_to "Log in", login_path %>
+                               </div>
+                              </span>
+                            <% end %>                      
+                        <span id="log_container">
+                              <% flash.each do |name, msg| %> 
+                              <%= content_tag :div, msg, :id => "flash#name" %>
+                               <% end %>
+                        </span>
+                    </nav>
                 </nav>
               </div>
-                <hr>
+            
       </div>
     </div>
 

@@ -14,90 +14,72 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-  
 
-<div class ="container">
-    <div class="header-img">
-      <!--<img src="/images/tefl_logo.jpg" width:"16" height:"16" class="img-responsive" alt="Responsive image">-->
-    </div>
-          <h1 id="platform-name">TEFL Platform</h1> <br>
-   <p class="motto">Educative platform for teachers and students fostering English learning.</p>
+<div class="container">
+          <h3 id="platform-name">TEFL Hiking</h3> <br>
+   <p class="motto">Lighten your backpack, learn English on the go.</p>
 <div>
 
 <hr>
 
 <article>
-<h3 class= "recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
+
+<h3 class="next-trails"><img id="safari-logo" src="/images/safari.png" height="46" width="46"> Next Trails</h3>
+<img id="messages-logo" src="/images/Alkala.jpg" height="200" width="300">
+
+<aside class="next-trails">
+  <ul> 
+    <h4>Ecce Homo's Trail </h4>
+    <li>Date: 18/7/2015 </li>
+    <li>Time: 10:30AM </li>
+    <li>Meeting point: Parking Los Cerros, Alcala de Henares (Madrid)</li>
+    <li><a href="http://www.wikiloc.com/wikiloc/view.do?id=2421067">Go to Map</a></li>
+  </ul>
+</aside>
+
+<h3 class="recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div id="posts-content">
-      <table> 
-        
-               <% @posts.each do |post| %> 
+        <table> 
+          
+                 <% @posts.each do |post| %> 
 
-              <tr>
-                <th><h4 id="post-title"><%= post.title %><h4></th>
-              </tr>
-              <tr>
-                <td>By: <b><%= post.name %></b></td>
-              </tr>
-              <tr>  
-                <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
-                </td>
-              </tr>
-              <tr>
-              
-                <td><%= post.text %></td>
-              </tr> 
-                   <% end %>
-          </table>
+                  <th><h4 id="post-title"><%= post.title %><h4></th>
+                <tr>
+                  <td>By: <b><%= post.name %></b></td>
+                </tr>
+                <tr>  
+                  <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
+                  </td>
+                </tr>
+                <tr>
+                   <td><%= post.text %></td>
+                </tr>  
+                <tr>
+                  <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
+                  <button type='button' id='like-button'> Like </button>
+                                            <td id="likes">
+                                            </td>
+                </tr>
+                     <% end %>
+            </table>
+            <div id="pager-edit">
+                      <ul class="pager">
+                            <li><a href="/posts">All posts</a></li> 
+                       </ul>
+            </div>
          </div>
         </div>
       </div>
+</div>
 
-      </div>
 
-    <ul class="pager">
-      <li><a href="/posts">Show all</a></li>
-    </ul>
-  </div>
 
 <div class="fb-comments" data-href="http://localhost:3000/home" data-numposts="5"></div>
 
-    <!--<table id="post-comments">
-        <tr>
-          <%= form_for :post, url: posts_path do |f| %>
-
-            <th> Post your ideas!</th> 
-            
-            <tr>
-              <td>
-                 <p>
-                    <%= f.label :title %><br>
-                    <%= f.text_field :title %>
-                  </p>
-
-                  <p>
-                    <%= f.label :name %><br>
-                    <%= f.text_field :name %>
-                  </p>
-                 
-                  <p>
-                    <%= f.label :text %><br>
-                    <%= f.text_area :text %>
-                  </p>
-                 
-                  <p>
-                    <%= f.submit %>
-                  </p>
-              </td>
-            </tr>
-
-             <% end %>
-              <table> 
-              -->   
 </article>
 
 	 <script type="text/javascript">
