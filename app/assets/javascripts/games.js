@@ -4,6 +4,12 @@ $(document).ready(function(){
 		    $('#output').html(function(i, val) { return val*1+1 });
 		});
 
+		$('td#doWrong1, td#doWrong2').on('click', function(){
+			$('#output').html(function(i, val) { return val*1-1});
+		});
+
+/* Alerta de errores o aciertos por pantalla
+
 		$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
 			alert('Correct!');
 		});
@@ -11,7 +17,7 @@ $(document).ready(function(){
 		$('td#doWrong1, td#doWrong2').on('click', function() {
 			alert('Wrong!');	
 		});
-
+*/
 		$('td#doRight1').on('click', function() {
 			$('td#doRight1').css('background-color', 'rgb(73,203,214)');
 		});
@@ -57,7 +63,8 @@ $(document).ready(function(){
 		});
 });
 
-/*
+/* Juego de asociación de palabras planteado a modo de trivial
+
 	var user = {}
 	var responses = [] 
 
@@ -83,7 +90,7 @@ $(document).ready(function(){
 			     	case 'the trumpet':
 			     	case 'the piano':
 			    alert('Correct answer!');
-//Necesito controlar el flujo para contabilizar los puntos por respuesta correcta y restar por error. Tendríamos 11 intentos, una por palabra.
+//Controlar el flujo para contabilizar los puntos por respuesta correcta y restar por error. Tendríamos 11 intentos, una por palabra.
 			    break;
 			    	case 'dead':
 			    	case 'fight':
