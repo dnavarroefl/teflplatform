@@ -15,18 +15,18 @@
 <body>
 
   <div class="container">
-    <h3 id="platform-name">TEFL Hiking</h3> <br>
-    <p class="motto">Lighten your backpack, learn English on the go.</p>
+    <h3 class="text-center">TEFL Hiking</h3> <br>
+    <p class="text-center">Lighten your backpack, learn English on the go.</p>
   </div>
 
   <hr>
 
   <article>
 
-    <h3 class="next-trails"><img id="safari-logo" src="/images/safari.png" height="46" width="46"> Next Trails</h3>
-    <img id="messages-logo" src="/images/Alkala.jpg" height="200" width="300">
+    <h3 class="text-center"><img id="safari-logo" src="/images/safari.png" height="46" width="46"> Next Trails</h3>
+    <img src="/images/Alkala.jpg" height="200" width="300" class="img-responsive center-block">
 
-    <aside class="next-trails">
+    <aside class="text-center">
       <ul> 
         <h4>Ecce Homo's Trail </h4>
         <li>Date: 18/7/2015 </li>
@@ -36,14 +36,16 @@
       </ul>
     </aside>
 
-    <h3 class="recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
+    <hr>
+
+    <h3 class="text-center"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div id="posts-content">
+          <div class="text-justify">
             <table> 
-              
+
              <% @posts.each do |post| %> 
 
              <th><h4 id="post-title"><%= post.title %><h4></th>
@@ -63,6 +65,7 @@
               <td id="likes">
               </td>
             </tr>
+            <br>
             <% end %>
           </table>
           <div id="pager-edit">
@@ -75,7 +78,9 @@
     </div>
   </div>
 
+<div class="text-center">
   <div class="fb-comments" data-href="http://localhost:3000/home" data-numposts="5"></div>
+</div>
 
 </article>
 

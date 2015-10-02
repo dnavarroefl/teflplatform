@@ -4,44 +4,44 @@
 </head>
 
 <body>
-  <h3 id="tools-title"><img id="tools-logo" src="/images/tools.png" height="46" width="46"> Tools </h3><br>   
-  <h4 id="tools-subheader">Get used to some APPs </h4>
+  <h3 class="text-center"><img id="tools-logo" src="/images/tools.png" height="46" width="46"> Tools </h3><br>   
+  <h4 class="text-center">Get used to some APPs </h4>
 
   <hr>
-         <div id="duolingo_container">
-              <img id="duolingo-logo" src="/images/duolingo.png" height="46" width="46">
+  <div class="text-center">
+    <img id="duolingo-logo" src="/images/duolingo.png" height="46" width="46">
 
-              <h4><strong>Discover Duolingo, an amazing and interactive way of learning English.</strong></h4><br>
-                  <ol>
-                      <li><a href="https://www.duolingo.com/o$o=deivyemcee@hotmail.com&s=TEFL%20Platform"><b>Join</b> our <b>Duolingo Dashboard!</b></a></li>
+    <h4><strong>Discover Duolingo, an amazing and interactive way of learning English.</strong></h4><br>
+    <ol>
+      <li><a href="https://www.duolingo.com/o$o=deivyemcee@hotmail.com&s=TEFL%20Platform"><b>Join</b> our <b>Duolingo Dashboard!</b></a></li>
 
-                      <li><a href="/duolingo/dashboard">See your class progress at <b>Duolingo Dashboard</b></a></li>
-                   </ol>
-          </div>
-      
-      <div id="dropbox_container">
-              <img id="dropbox-logo" src="/images/dropbox.png" height="46" width="46">
+      <li><a href="/duolingo/dashboard">See your class progress at <b>Duolingo Dashboard</b></a></li>
+    </ol>
+  </div>
 
-              <h4><strong>Browse our Dropbox, one of the best cloud servers to share our content.</strong></h4><br>
-              <ol>
-                  <li><%= link_to 'Authenticate', controller: "dropbox", action: "auth_start" %></li>        
-                  <li><a href="https://www.dropbox.com/sh/ow7ekrt4w32358u/AAB8doO49mCrb8vvFhX2IKoaa?dl=0">Browse the <b>TEFL folder</b> and <b>download</b> the files you need.</a></li>
-                  <li><%= link_to 'Upload your file to dropbox', controller: "dropbox", action: "main" %></li>
-          </ol>
-          <script src="https://www.dropbox.com/static/api/2/dropins.js" type="text/javascript" id="dropboxjs" data-app-key="ps8sv6wjj5v125t"></script>
-          <br>
-          <h4> We strongly recommend <b>'WE TEACH. WE LEARN'</b> as a guide to make your classes <b>interactive</b> and <b>learner-centered</b>.</h4>
-          
-          <a href="https://www.dropbox.com/home/TEFL?preview=teachlearn.pdf" class="dropbox-saver">Save</a><br>
-          <br>
-      </div>
+  <div class="text-center">
+    <img id="dropbox-logo" src="/images/dropbox.png" height="46" width="46">
 
-      <div id="pager-edit">
-        <ul class="pager">
-              <li><a href="/home">Back</a></li> 
-         </ul>
-      </div>
-  </body>
+    <h4><strong>Browse our Dropbox, one of the best cloud servers to share our content.</strong></h4><br>
+    <ol>
+      <li><%= link_to 'Authenticate', controller: "dropbox", action: "auth_start" %></li>        
+      <li><a href="https://www.dropbox.com/sh/ow7ekrt4w32358u/AAB8doO49mCrb8vvFhX2IKoaa?dl=0">Browse the <b>TEFL folder</b> and <b>download</b> the files you need.</a></li>
+      <li><%= link_to 'Upload your file to dropbox', controller: "dropbox", action: "main" %></li>
+    </ol>
+    <script src="https://www.dropbox.com/static/api/2/dropins.js" type="text/javascript" id="dropboxjs" data-app-key="ps8sv6wjj5v125t"></script>
+    <br>
+    <h4> We strongly recommend <b>'WE TEACH. WE LEARN'</b> as a guide to make your classes <b>interactive</b> and <b>learner-centered</b>.</h4>
+
+    <a href="https://www.dropbox.com/home/TEFL?preview=teachlearn.pdf" class="dropbox-saver">Save</a><br>
+    <br>
+  </div>
+
+  <div id="pager-edit">
+    <ul class="pager">
+      <li><a href="/home">Back</a></li> 
+    </ul>
+  </div>
+</body>
 </html>
 
 

@@ -5,16 +5,16 @@
 
 <body>
 	
-<span id="student-header">
+<span class="text-center">
 	<h2 id="student-title"><img id="student-header" src="/images/students.png" height="46" width="46"> Your Team </h2>
 </span>
 
 <hr>
 
-<div ="students_details">
+<div class="text-center">
 	<p> 
 		<% @students.each do |student| %>
-	<table>
+	<table class="table">
 		<tr>
 			<th><b><%= student.name %></b></th>
 			<td><img src="/images/students.png" height="46" width="46"></td>
@@ -22,7 +22,7 @@
 			<td><b>Email:</b> <%= student.email %></td>
 			<td><b>Age:</b> <%= student.age %></td>
 			<td><b>Level:</b> <%= student.level %></td>
-		<!-- 
+		<!-- Otras características que pueden ser añadidas desde el backend
 			<td>Progress: <%= student.progress %></td>
 			<td>Score: <%= student.score %></td>
 			<td>Comment: <%= student.comment %></td>

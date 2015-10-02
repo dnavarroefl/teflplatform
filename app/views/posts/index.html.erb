@@ -5,96 +5,96 @@
 
 <body>
 
-<article>
-<h2 class= "recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h2>
+  <article>
+    <h2 class="text-center">
+      <img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts 
+    </h2>
 
-<hr>
+    <hr>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-        <div id="posts-content">
-          <table> 
-               <% @posts.each do |post| %> 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="posts-content">
+            <table class="table"> 
+             <% @posts.each do |post| %> 
 
-              <tr>
-                <th><h4 id="post-title"><%= post.title %><h4></th>
-              </tr>
-              <tr>
-                <td>By: <b><%= post.name %></b></td>
-              </tr>
-              <tr>  
-                <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
-                </td>
-              </tr>
-              <tr>
-              
-                <td><%= post.text %></td>
-              </tr>  
-              <tr>
-                <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
-                <button type='button' id='like-button'> Like </button>
-                                          <td id="likes">
-                                          </td>
-              </tr>
-
-                   <% end %>
-                   </table>
-             </div>
-        
-
-  
-        </div>
-      </div>
-
-      </div>
-  </div>
-
-      <table id="post-comments">
-        <tr>
-          <%= form_for :post, url: posts_path do |f| %>
-
-            <th> Post your ideas!</th> 
-            
+             <tr>
+              <th><h4 id="post-title"><%= post.title %><h4></th>
+            </tr>
             <tr>
-              <td>
-                 <p>
-                    <%= f.label :title %><br>
-                    <%= f.text_field :title %>
-                  </p>
-
-                  <p>
-                    <%= f.label :name %><br>
-                    <%= f.text_field :name %>
-                  </p>
-                 
-                  <p>
-                    <%= f.label :text %><br>
-                    <%= f.text_area :text %>
-                  </p>
-                 
-                  <p>
-                    <%= f.submit %>
-                  </p>
+              <td>By: <b><%= post.name %></b></td>
+            </tr>
+            <tr>  
+              <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
               </td>
             </tr>
+            <tr>
 
-             <% end %>
-              <table>    
-</article>
+              <td><%= post.text %></td>
+            </tr>  
+            <tr>
+              <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
+                <button type='button' id='like-button'> Like </button>
+                <td id="likes">
+                </td>
+              </tr>
+            </article>
 
-<div id="pager-edit">
-  <ul class="pager">
-        <li><a href="/home">Back</a></li> 
-   </ul>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<div class="text-center">
+<table class="table">
+    <%= form_for :post, url: posts_path do |f| %>
+
+    <th class="text-center"> Post your ideas!</th> 
+
+    <tr>
+      <td>
+       <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+      </p>
+
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
+
+      <p>
+        <%= f.label :text %><br>
+        <%= f.text_area :text %>
+      </p>
+
+      <p>
+        <%= f.submit %>
+      </p>
+    </td>
+
+  <% end %>
+  <table>   
+</div> 
+
+
+    <div id="pager-edit">
+      <ul class="pager">
+        <li><a href="/home">Back</a></li> 
+      </ul>
+    </div>
 
     <script type="text/javascript">
 
-        $('button#like-button').on('click', function() {
-          alert('Thanks for your support!');
-        });
+    $('button#like-button').on('click', function() {
+      alert('Thanks for your support!');
+    });
     </script>
-</body>
-</html>
+  </body>
+  </html>
 

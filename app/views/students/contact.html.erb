@@ -4,65 +4,69 @@
 </head>
 
 <body>
-    <h2 id="title-tutor"><img id= "contact-tutor" src="/images/email.png" height="46" width="46"> Contact your teacher/guide </h2> 
+  <h2 class="text-center"><img id= "contact-tutor" src="/images/email.png" height="46" width="46"> Contact your teacher </h2> 
 
   <hr>
 
-<div class="contact-info">
-  <% @tutors.each do |tutor| %>
-  <p>
-  	<table id="tutor-table">
+  <div class="text-center">
+    <% @tutors.each do |tutor| %>
+    <p>
+      <table class="table">
 
       <td><img id="tutor-profile" width="100px" height="100px" src="/images/teacher_profile.jpg"></td>
 
-    <th> Contact info </th>
-  		<td><%= tutor.name %></td>
-  		<td>Email: <%= tutor.email %></td>
+      <th> Contact info </th>
+      <td><%= tutor.name %></td>
+      <td>Email: <%= tutor.email %></td>
       <td>
         <div id="email-button" align="center"><a href="mailto:dnavarroefl@hotmail.com"><img width="46"height="46" src="/images/email.png"></a></div>Send Email</td>
-      <td>
-        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-            <div id="SkypeButton_Call_deivy.mc_1">
-              <script type="text/javascript">
-                Skype.ui({
-                  "name": "dropdown",
-                  "element": "SkypeButton_Call_deivy.mc_1",
-                  "participants": ["deivy.mc"],
-                  "imageSize": 40
-                });
-          </script>
-        </div>      
-      </td>
-  	</table>
-</div>
+        <td>
+          <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+          <div id="SkypeButton_Call_deivy.mc_1">
+            <script type="text/javascript">
+            Skype.ui({
+              "name": "dropdown",
+              "element": "SkypeButton_Call_deivy.mc_1",
+              "participants": ["deivy.mc"],
+              "imageSize": 40
+            });
+            </script>
+          </div>      
+        </td>
+      </table>
+    </div>
+  </div>
 
   <% end %>
 
-  <h3 id="feedback-title"> Feedback </h3><br>
+  <div class="text-center">
+    <h3 class="text-center"> Send your feedback </h3><br>
 
-<%= form_for :comment, url: comments_path do |f| %>
+    <%= form_for :comment, url: comments_path do |f| %>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
 
-  <script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
+    <p>
+      <%= f.label :text %><br>
+      <%= f.text_area :text %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+    <% end %>
+  </div>
+
+  <script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js">
+  </script>
 
 </body>
 </html>

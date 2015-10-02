@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tefl Hiking</title>
+
   <meta charset="utf-8">
-  <meta content="width=640px" name="viewport">
+  <meta name="viewport" content="width=640px" >
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen">
-  <link rel="stylesheet" type="text/css" href="/bootstrap.css">
-  <link rel="stylesheet" type"text/css" href="assets/stylesheets/home.css">
+  <title>Tefl Hiking</title>
 
-  <script type="text/javascript" src="/assets/games.js"></script>   
+  <!--<link href="assets/stylesheets/home.css" rel="stylesheet" type"text/css" >-->
+  <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+  <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script> 
+  <script type="text/javascript" src="/assets/games.js"></script>   
   
-  <!--Error en la l.17 relacionado con SASS Y answers.scss-->
   <%= stylesheet_link_tag 'application' => true, media: 'all' %>
   <%= javascript_include_tag 'application'=> true %>
   <%= csrf_meta_tags %>
 </head>
 
-<nav class="navbar navbar-default navbar-fixed-top role=navigation">
-  <div class="nav_container">
+<body>
 
-    <div class="sb-toggle-left"></div>
-    <ul>
-      <a class="navbar-brand" href="/home">
-        <img id="tefl-logo" alt="TEFL" width="46" height="46" src="/images/tefl_logo.jpg">
-      </a>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="nav_container">
+      <div class="sb-toggle-left"></div>
+      <ul>
+        <a class="navbar-brand" href="/home">
+          <img id="tefl-logo" alt="TEFL" width="36" height="36" src="/images/tefl_logo.jpg">
+        </a>
+      </ul>
+
+      <span id="log_container">  
+        <% if current_user %> 
+        Logged in as <%= current_user.email %><br>
+        <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
+        <%= link_to "Log out", :logout, method: :post %>
+        <% else %>
+        <%= link_to "Sign up", signup_path %>
+        or
+        <%= link_to "Log in", login_path %>
+      </span>
+      <% end %>   
+      <% flash.each do |name, msg| %> 
+      <%= content_tag :div, msg, :id => "flash#name" %>
+      <% end %>
+    </span>
+
     </div>
-  </ul>
+  </div>
 
-  <span id="log_container">  
-    <% if current_user %> 
-    Logged in as <%= current_user.email %><br>
-    <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
-    <%= link_to "Log out", :logout, method: :post %>
-    <% else %>
-    <%= link_to "Sign up", signup_path %>
-    or
-    <%= link_to "Log in", login_path %>
-  </span>
-  <% end %>   
-  <% flash.each do |name, msg| %> 
-  <%= content_tag :div, msg, :id => "flash#name" %>
-  <% end %>
-</span>
-</div>
+  <ul class="nav nav-pills pull-right">
+  </li>
 
-<ul class="nav nav-pills pull-right">
-</li>
-
-<li role="presentation"> <span id="home-link">
-</span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/home">HOME</a>
+  <li role="presentation"> <span id="home-link">
+  </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/home">HOME</a>
 </li>
 
 <li role="presentation"> <span id="teachers-link">
@@ -85,16 +88,14 @@
 </div>
 </nav>
 
-<body>
- 
-  <%= yield %>
+<%= yield %>
 </body>
 
-<nav>
+<footer>
   <div class="container">
-    <div id="wrap">
-      <footer class="clearfix">® TEFL, 2015</footer>
-    </div>
+      <span class="wrap"> TEFL, ® 2015
+      </span>
   </div>
-</nav>
+</footer>
+
 </html>
