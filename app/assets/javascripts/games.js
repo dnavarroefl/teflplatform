@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-		$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
-		    $('#output').html(function(i, val) { return val*1+1 });
-		});
+	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
+		$('#output').html(function(i, val) { return val*1+1 });
+	});
 
-		$('td#doWrong1, td#doWrong2').on('click', function(){
-			$('#output').html(function(i, val) { return val*1-1});
-		});
+	$('td#doWrong1, td#doWrong2').on('click', function(){
+		$('#output').html(function(i, val) { return val*1-1});
+	});
 
 /* Alerta de errores o aciertos por pantalla
 
@@ -18,49 +18,49 @@ $(document).ready(function(){
 			alert('Wrong!');	
 		});
 */
-		$('td#doRight1').on('click', function() {
-			$('td#doRight1').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight1').on('click', function() {
+	$('td#doRight1').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight2').on('click', function() {
-			$('td#doRight2').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight2').on('click', function() {
+	$('td#doRight2').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight3').on('click', function() {
-			$('td#doRight3').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight3').on('click', function() {
+	$('td#doRight3').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight4').on('click', function() {
-			$('td#doRight4').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight4').on('click', function() {
+	$('td#doRight4').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight5').on('click', function() {
-			$('td#doRight5').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight5').on('click', function() {
+	$('td#doRight5').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight6').on('click', function() {
-			$('td#doRight6').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight6').on('click', function() {
+	$('td#doRight6').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight7').on('click', function() {
-			$('td#doRight7').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight7').on('click', function() {
+	$('td#doRight7').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight8').on('click', function() {
-			$('td#doRight8').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight8').on('click', function() {
+	$('td#doRight8').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doRight9').on('click', function() {
-			$('td#doRight9').css('background-color', 'rgb(73,203,214)');
-		});
+$('td#doRight9').on('click', function() {
+	$('td#doRight9').css('background-color', 'rgb(73,203,214)');
+});
 
-		$('td#doWrong1').on('click', function() {
-			$('td#doWrong1').css('background-color', '#D11B1B');
-		});
+$('td#doWrong1').on('click', function() {
+	$('td#doWrong1').css('background-color', '#D11B1B');
+});
 
-		$('td#doWrong2').on('click', function() {
-			$('td#doWrong2').css('background-color', '#D11B1B');
-		});
+$('td#doWrong2').on('click', function() {
+	$('td#doWrong2').css('background-color', '#D11B1B');
+});
 });
 
 /* Juego de asociación de palabras planteado a modo de trivial
@@ -201,7 +201,7 @@ $(document).ready(function(){
 	evaluate([responses]);
 
  </script>
-*/
+ */
 
 
 

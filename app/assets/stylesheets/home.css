@@ -1,39 +1,39 @@
 /*Home CSS*/
 
 html {
-   height: 100%; 
+ height: 100%; 
 }
 
 img#tefl-logo {
-   position: relative;
-   color: black; 
-   font-size: 18px; 
-   font-family: Oxygen; 
-   margin-top: -10px;   
+ position: relative;
+ color: black; 
+ font-size: 18px; 
+ font-family: Oxygen; 
+ margin-top: -10px;   
 }
 
 a.btn.btn-navbar {
-   position: relative;
-   float: auto; 
-   font-size: 14px; 
-   font-family: Oxygen;
-   margin-top: -30px;   
+ position: relative;
+ float: auto; 
+ font-size: 14px; 
+ font-family: Oxygen;
+ margin-top: -30px;   
 }
 
 nav.navbar { 
-   position: fixed; 
-   top: 0; 
-   left: 0; 
-   margin: 0;
-   width: 100%; 
-   height: 80px;  
-   background-color: #49CBD6;  
-   padding: 10px;
-   box-shadow: 0 0 1em grey;
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ margin: 0;
+ width: 100%; 
+ height: 80px;  
+ background-color: #49CBD6;  
+ padding: 10px;
+ box-shadow: 0 0 1em grey;
 }
 
 div.nav_container {
-   position: relative;
+ position: relative;
 }
 
 span#log_container  {
@@ -44,36 +44,36 @@ span#log_container  {
 }
 
 ul.pager {
-float: left; 
-   padding: 10px; 
-   
+  float: left; 
+  padding: 10px; 
+  
 }
 
 h3.next-trails {
-   margin-left: 90px;
-   margin-bottom: 30px; 
+ margin-left: 90px;
+ margin-bottom: 30px; 
 }
 
 aside.next-trails {
-   margin-left: 300px;
-   margin-top: -190px;
-   margin-bottom: 100px
+ margin-left: 300px;
+ margin-top: -190px;
+ margin-bottom: 100px
 }
 
 div#pager-edit {
-   margin-left: 0%; 
+ margin-left: 0%; 
 }
 
 h3.session-title, h3#signup-title {
-   font-size: 35px; 
-   font-family: Oxygen; 
-   color: black; 
-   margin-top: 15%; 
-   margin-left: 35%; 
+ font-size: 35px; 
+ font-family: Oxygen; 
+ color: black; 
+ margin-top: 15%; 
+ margin-left: 35%; 
 }
 
 h3#feedback-title {
-   margin-left: 43%; 
+ margin-left: 43%; 
 }
 
 form{
@@ -91,204 +91,204 @@ form{
 }
 
 img.img-responsive {
-   top: 0; 
-   left: 0; 
-   position: fixed; z-index: -1;
-   width: 100%;
-   height: 600px; 
+ top: 0; 
+ left: 0; 
+ position: fixed; z-index: -1;
+ width: 100%;
+ height: 600px; 
 }
 
 .login-img {
-   top: 0; 
-   left: 0; 
-   right: 0; 
-   position: fixed; z-index: -1;
-   width: 100%;
-   height: 1000px; 
-   
+ top: 0; 
+ left: 0; 
+ right: 0; 
+ position: fixed; z-index: -1;
+ width: 100%;
+ height: 1000px; 
+ 
 }
 
 h3#platform-name {  
-   text-align: center; 
-   color: #49CBD6;
-   margin-top: 5%; 
-   margin-left: 10%; 
-   margin-right: 10%;
-   font-family: Oxygen; 
-   font-size: 50px;
+ text-align: center; 
+ color: #49CBD6;
+ margin-top: 5%; 
+ margin-left: 10%; 
+ margin-right: 10%;
+ font-family: Oxygen; 
+ font-size: 50px;
 } 
 
 p.motto {
-   text-align: center; 
-   margin-left: 10%; 
-   margin-right: 10%; 
-   padding-bottom: 10px; 
-   font-family: Oxygen; 
-   font-size: 25px; 
+ text-align: center; 
+ margin-left: 10%; 
+ margin-right: 10%; 
+ padding-bottom: 10px; 
+ font-family: Oxygen; 
+ font-size: 25px; 
 }
 
 button#like-button {  
-   font-style: Oxygen; 
+ font-style: Oxygen; 
 }
 
 h3.recent-posts-header {
-   text-align: center; 
+ text-align: center; 
 }
 
 h3#latest_post, h3#latest_feedback{
-   padding: 10px;
+ padding: 10px;
 }
 
 h4#post-title {
-   margin-right: 100%;
-   color: #49CBD6;
-   
+ margin-right: 100%;
+ color: #49CBD6;
+ 
 }
 
 table#post-comments {
-   text-align: center; 
-   width: 50%;
-   margin-top: 10px;  
-   background-color: #49CBD6;
-    box-shadow: 0 0 1em black;
-   border-radius: 20px 20px 20px 20px; 
+ text-align: center; 
+ width: 50%;
+ margin-top: 10px;  
+ background-color: #49CBD6;
+ box-shadow: 0 0 1em black;
+ border-radius: 20px 20px 20px 20px; 
 }
 
 div.fb-comments {
-   position: relative;
-   margin-left: 25%;
-   margin-top: -70px;
-   margin-bottom: 10%
+ position: relative;
+ margin-left: 25%;
+ margin-top: -70px;
+ margin-bottom: 10%
 }
 
 body { 
-   font-family: verdana; 
-   width: 1024;
-   height: 600px; 
-   margin-top: 5%; 
-   margin-right: 10%; 
-   margin-left: 10%; 
-   margin-bottom: 10%; 
+ font-family: verdana; 
+ width: 1024;
+ height: 600px; 
+ margin-top: 5%; 
+ margin-right: 10%; 
+ margin-left: 10%; 
+ margin-bottom: 10%; 
 } 
 
 #like-button, #reply-button {
-   padding: 4px; 
-   margin-left: 50px; 
-  
-   margin: 4px;
-   font-size: 14px; 
-   font-style: Oxygen; 
+ padding: 4px; 
+ margin-left: 50px; 
+ 
+ margin: 4px;
+ font-size: 14px; 
+ font-style: Oxygen; 
 }
 
 /*Posts, comments & feedback CSS*/
 
 table#posts {   
-   margin-right: 20px;
-   margin-left: 20px;
-   box-shadow: 0 0 1em black;
-   border-radius: 20px 30px 30px 20px;
+ margin-right: 20px;
+ margin-left: 20px;
+ box-shadow: 0 0 1em black;
+ border-radius: 20px 30px 30px 20px;
 }
 
 h2#post-title {
-   width: 50%; 
-   text-align: center; 
-   padding: 3px; 
-   margin-top: 10px; 
-   margin-left: 300px;
+ width: 50%; 
+ text-align: center; 
+ padding: 3px; 
+ margin-top: 10px; 
+ margin-left: 300px;
 
 }
 
 div#posts-content {
-   margin: 10px;
-   margin-left: 15%; 
-   margin-right: 15%;
-   font-style: Oxygen; 
-   font-size: 16px; 
+ margin: 10px;
+ margin-left: 15%; 
+ margin-right: 15%;
+ font-style: Oxygen; 
+ font-size: 16px; 
 }
 
 table#post-comments {
-   width: 50%; 
-   margin-left: 150px; 
-   margin-top: 50px; 
-   color: black; 
-   background-color: #49CBD6; 
-   border-radius: 20px 20px 20px 20px; 
+ width: 50%; 
+ margin-left: 150px; 
+ margin-top: 50px; 
+ color: black; 
+ background-color: #49CBD6; 
+ border-radius: 20px 20px 20px 20px; 
 }
 
 div#comments-content {
-   margin-bottom: 10px; 
+ margin-bottom: 10px; 
 }
 
 /* Headers & Titles */
 
 h1#students-wall, h2#matching-title, h3#media-title, h3#post-title, h2#title-tutor, h2#teachers-title, h3#tools-title, h1#tutors-title, h4#teachers-title, h2.recent-posts-header  {
-   
-   width: 50%; 
-   font-style: Oxygen; 
-   font-size: 30px; 
-   text-align: center; 
-   padding: 3px; 
-   margin-left: 25%;  
-   margin-top: 10%;
+ 
+ width: 50%; 
+ font-style: Oxygen; 
+ font-size: 30px; 
+ text-align: center; 
+ padding: 3px; 
+ margin-left: 25%;  
+ margin-top: 10%;
 }
 
 h2#student-title {
-   
-   margin-left: 45%;
-   
+ 
+ margin-left: 45%;
+ 
 }
 
 /* Game CSS */
 
 img#match-games {
-   margin-top: -10px;
-   margin: 10px;
+ margin-top: -10px;
+ margin: 10px;
 }
 
 h4#game_instructions {
-   text-align: center; 
-   font-style: Oxygen; 
-   padding-bottom: 10px;
+ text-align: center; 
+ font-style: Oxygen; 
+ padding-bottom: 10px;
 }
 
 td#doRight,td#doWrong {
-   padding: 20px; 
-   font-size: 16px;
+ padding: 20px; 
+ font-size: 16px;
 }
 
 /*Tools CSS*/
 
 img#duolingo-logo {
-   margin-bottom: 15px; 
-   float: center; 
+ margin-bottom: 15px; 
+ float: center; 
 }
 
 div#duolingo_container > ol {
-     font-size: 16px; 
+ font-size: 16px; 
 }
 
 div#dropbox_container > ol {
-   font-size: 16px; 
+ font-size: 16px; 
 }
 
 div#matching-container {
-    font-style: Oxygen; 
-   text-align: center; 
-   margin: 10px;
-   box-shadow: 0 0 1em black;
-   padding: 25px;
-   margin: 10px;
-   border-radius: 20px 30px 30px 20px;
+  font-style: Oxygen; 
+  text-align: center; 
+  margin: 10px;
+  box-shadow: 0 0 1em black;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 20px 30px 30px 20px;
 }
 
 div#duolingo_container  {
-   font-style: Oxygen; 
-   text-align: center; 
-   margin: 10px;
-   box-shadow: 0 0 2em green;
-   padding: 25px;
-   margin: 10px;
-   border-radius: 20px 30px 30px 20px;
+ font-style: Oxygen; 
+ text-align: center; 
+ margin: 10px;
+ box-shadow: 0 0 2em green;
+ padding: 25px;
+ margin: 10px;
+ border-radius: 20px 30px 30px 20px;
 }
 
 img#dropbox-logo {
@@ -297,140 +297,140 @@ img#dropbox-logo {
 }
 
 div#dropbox_container  {
-   text-align: center; 
-   margin: 10px;
-   box-shadow: 0 0 2em blue;
-   padding: 25px; 
-   border-radius: 20px 30px 30px 20px;
+ text-align: center; 
+ margin: 10px;
+ box-shadow: 0 0 2em blue;
+ padding: 25px; 
+ border-radius: 20px 30px 30px 20px;
 }
 
 /*Media CSS*/
 
 h3#title, h3#media-title, h3#post-title { 
-   width: 50%; 
-   font-family: Oxygen; 
-   font-size: 30px; 
-   
+ width: 50%; 
+ font-family: Oxygen; 
+ font-size: 30px; 
+ 
 }
 
 h4#media-subheader, h4#tools-subheader {
-   text-align: center; 
-   margin-top: -10px; 
+ text-align: center; 
+ margin-top: -10px; 
 }
 
 img#media-new {
-   margin-top: -3px; 
+ margin-top: -3px; 
 }
 
 #ivoox-table {
-   margin-left: -15px; 
+ margin-left: -15px; 
 }
 
 iframe {
-   margin-top: 50px; 
+ margin-top: 50px; 
 }
 
 div#spotify_container {
-   margin-bottom: 50px; 
+ margin-bottom: 50px; 
 }
 
 /*Teacher & Tutor CSS*/ 
 
 h4#teachers-title2 {
-   width: 50%; 
-   text-align: center; 
-   padding: 3px; 
-   margin-left: 250px;
+ width: 50%; 
+ text-align: center; 
+ padding: 3px; 
+ margin-left: 250px;
 }
 
 div#issuu-reading {
-   box-shadow: 0 0 2em black;
-   border-radius: 20px 20px 20px 20px; 
-   padding: 10px; 
-   margin-left: 25%;
-   margin-top: 2%; 
+ box-shadow: 0 0 2em black;
+ border-radius: 20px 20px 20px 20px; 
+ padding: 10px; 
+ margin-left: 25%;
+ margin-top: 2%; 
 }
 
 div.management-links {
-   margin-left: 25%; 
+ margin-left: 25%; 
 }
 
 table#tutor-feedback, table#tutor-table {
-   margin: 20px; 
+ margin: 20px; 
 }
 
 div.contact-info {
-   align-content: center; 
-   display: inline; 
+ align-content: center; 
+ display: inline; 
 }
 
 /*Tables style*/
 
 th {
-   
-   text-align: center; 
-   font-size: 14px; 
-   padding: 10px;
+ 
+ text-align: center; 
+ font-size: 14px; 
+ padding: 10px;
 }
 
 tr {
-   margin-left: 5%;
-   padding: 15px; 
-   
+ margin-left: 5%;
+ padding: 15px; 
+ 
 }
 
 td {
-   font-size: 14px; 
-   border-radius: 20px 30px 30px 20px;
-   padding: 15px;  
+ font-size: 14px; 
+ border-radius: 20px 30px 30px 20px;
+ padding: 15px;  
 }
 
 div#word-list {
-   margin: 10px;
+ margin: 10px;
 }
 
 /*Links CSS */
 
 div#home-link {
-   margin-left: 375px;
+ margin-left: 375px;
 }
 
 div#back_link {
-    margin-left: 350px;
+  margin-left: 350px;
 }
 
 p.navbar-text {
-   text-align: center; 
+ text-align: center; 
 }
 
 footer.clearfix {
-    position: fixed;
-    background-color: #CCCCB2;
-    text-align: center; 
-    height: 20px;
-    right: 0;
-    left: 0; 
-    bottom: 0;
-    width: 100%; 
+  position: fixed;
+  background-color: #CCCCB2;
+  text-align: center; 
+  height: 20px;
+  right: 0;
+  left: 0; 
+  bottom: 0;
+  width: 100%; 
 }
 
 /** Diseño para tabletas **/
 
 @media only screen and (max-width: 768px){
-   body {
-      margin:15px;
-   }
+ body {
+  margin:15px;
+}
 
-   .navbar-fixed-top {
-      height: 50px;
-   }
-   
-   h3#platform-name {
-      margin-top: 15%;
-   }
-   
-   .btn-navbar {
-       float: right;  
-   }
+.navbar-fixed-top {
+  height: 50px;
+}
+
+h3#platform-name {
+  margin-top: 15%;
+}
+
+.btn-navbar {
+ float: right;  
+}
 }
 

@@ -25,14 +25,14 @@ class StudentsController < ApplicationController
 	end 
 
 	def edit
-		 @student = Student.find(params[:id])
+		@student = Student.find(params[:id])
 	end 
 
-	 def update
-	  @student = Student.find(params[:id])
-	  @student.update(student_params)
-	  redirect_to student_path(@student)
-	  end 
+	def update
+		@student = Student.find(params[:id])
+		@student.update(student_params)
+		redirect_to student_path(@student)
+	end 
 
 	def contact
 		@students = Student.all
@@ -51,8 +51,8 @@ class StudentsController < ApplicationController
 	end 
 
 	def games
-	 	@students = Student.all
-	 	@tutors = Tutor.all
+		@students = Student.all
+		@tutors = Tutor.all
 	end
 
 	def get_all_info
@@ -69,7 +69,7 @@ class StudentsController < ApplicationController
 	def comments
 		@comments = Comment.all
 	end 
- 
+	
 	def student_params
 		params.require(:student).permit(:name, :email, :age, :level, :progress, :score, :comment)
 	end

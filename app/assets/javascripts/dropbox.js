@@ -8,8 +8,8 @@
 
             // Required. Called when a user selects an item in the Chooser.
             success: function(files) {
-                alert("Here's the file link: " + files[0].link)
-            },
+              alert("Here's the file link: " + files[0].link)
+        },
 
             // Optional. Called when the user closes the dialog without selecting a file
             // and does not include any parameters.
@@ -31,9 +31,9 @@
             // file types, such as "video" or "images" in the list. For more information,
             // see File types below. By default, all extensions are allowed.
             extensions: ['.pdf', '.doc', '.docx'],
-            };
+      };
 
-            file = {
+      file = {
 
             // Name of the file.
             name: "teachlearn.pdf",
@@ -51,4 +51,4 @@
             // A thumbnail URL generated when the user selects images and videos.
             // If the user didn't select an image or video, no thumbnail will be included.
             thumbnailLink: "https://...?bounding_box=75&mode=fit",
-         };
+      };

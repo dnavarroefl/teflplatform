@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   get  "dropbox/auth_start"
   get  "dropbox/auth_finish"
   get  "dropbox/explore" => redirect("https://www.dropbox.com/home/TEFL")
-     
+  
   post "dropbox/upload"
 
   get "duolingo/dashboard" => redirect("https://dashboard.duolingo.com/")
