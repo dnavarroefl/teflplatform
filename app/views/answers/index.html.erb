@@ -1,52 +1,49 @@
-<h1 id="students-wall"> Answers </h1>
-<hr>
-<div id="answers_home">
 
-<article>
-<h3 class= "recent-posts-header"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Answers </h3>
+<div class="text-center">
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <table> 
-        <div id="posts-content">
-               <% @answers.each do |answer| %> 
+  <h3>
+    <img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Answers </h3>
 
-              <tr>
-                <th><h4 id="post-title"><%= answer.title %><h4></th>
-              </tr>
-              <tr>
-                <td>By: <b><%= answer.name %></b></td>
-              </tr>
-              <tr>  
-                <td>Replied on: <%= answer.created_at.mday %>/<%= answer.created_at.month %>/<%= answer.created_at.year %>
-                </td>
-              </tr>
-              <tr>
-              
-                <td><%= answer.text %></td>
-              </tr>  
-              <tr>
-               <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
-                <button type='button' id='like-button'> Like </button>
-                                          <td id="likes">
-                                          </td>
-              </tr>
-                   <% end %>
-             </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table"> 
+           <% @answers.each do |answer| %> 
+
+           <tr>
+            <th><h4 class="text-center"><%= answer.title %><h4></th>
+          </tr>
+          <tr>
+            <td>By: <b><%= answer.name %></b></td>
+          </tr>
+          <tr>  
+            <td>Replied on: <%= answer.created_at.mday %>/<%= answer.created_at.month %>/<%= answer.created_at.year %>
+            </td>
+          </tr>
+          <tr>
+
+            <td><%= answer.text %></td>
+          </tr>  
+          <tr>
+           <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
+            <button type='button' id='like-button'> Like </button>
+            <td id="likes">
+            </td>
+          </tr>
+          <% end %>
         </table>
-	</div>
-	</div>
-</div>
+      </div>
+    </div>
+  </div>
 
-<ul class="pager">
-<li><a href="/home">Back</a></li>
-</ul>
+  <ul class="pager">
+    <li><a href="/home">Back</a></li>
+  </ul>
 
- <script type="text/javascript">
+  <script type="text/javascript">
 
-        $('button#like-button').on('click', function() {
-          alert('Thanks for your support!');
-        });
-    </script>
+  $('button#like-button').on('click', function() {
+    alert('Thanks for your support!');
+  });
+  </script>
 

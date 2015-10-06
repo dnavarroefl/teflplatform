@@ -1,18 +1,19 @@
-  <%= form_for @student do |f| %>
-  
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.text_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :level %><br>
-    <%= f.text_field :level %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <% end %>
+
+<%= form_for @student do |f| %>
+
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :age %><br>
+  <%= f.text_field :age %>
+</div>
+<div class="field">
+  <%= f.label :level %><br>
+  <%= f.text_field :level %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

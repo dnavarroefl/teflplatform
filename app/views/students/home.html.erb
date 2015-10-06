@@ -19,64 +19,64 @@
     <p class="text-center">Lighten your backpack, learn English on the go.</p>
   </div>
 
-  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center">
+        <img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
 
-  <article>
+        <div class="text-justify">
+          <table> 
 
-    <h3 class="text-center"><img id="safari-logo" src="/images/safari.png" height="46" width="46"> Next Trails</h3>
-    <img src="/images/Alkala.jpg" height="200" width="300" class="img-responsive center-block">
+           <% @posts.each do |post| %> 
 
-    <aside class="text-center">
-      <ul> 
-        <h4>Ecce Homo's Trail </h4>
-        <li>Date: 18/7/2015 </li>
-        <li>Time: 10:30AM </li>
-        <li>Meeting point: Parking Los Cerros, Alcala de Henares (Madrid)</li>
-        <li><a href="http://www.wikiloc.com/wikiloc/view.do?id=2421067">Go to Map</a></li>
-      </ul>
-    </aside>
-
-    <hr>
-
-    <h3 class="text-center"><img id="messages-logo" src="/images/messages.png" height="46" width="46"> Recent Posts </h3>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-justify">
-            <table> 
-
-             <% @posts.each do |post| %> 
-
-             <th><h4 id="post-title"><%= post.title %><h4></th>
-             <tr>
-              <td>By: <b><%= post.name %></b></td>
-            </tr>
-            <tr>  
-              <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
-              </td>
-            </tr>
-            <tr>
-             <td><%= post.text %></td>
-           </tr>  
+           <th><h4 id="post-title"><%= post.title %><h4></th>
            <tr>
-            <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
-              <button type='button' id='like-button'> Like </button>
-              <td id="likes">
-              </td>
-            </tr>
-            <br>
-            <% end %>
-          </table>
-          <div id="pager-edit">
-            <ul class="pager">
-              <li><a href="/posts">All posts</a></li> 
-            </ul>
-          </div>
-        </div>
+            <td>By: <b><%= post.name %></b></td>
+          </tr>
+          <tr>  
+            <td>Posted on: <%= post.created_at.mday %>/<%= post.created_at.month %>/<%= post.created_at.year %>
+            </td>
+          </tr>
+          <tr>
+           <td><%= post.text %></td>
+         </tr>  
+         <tr>
+          <td><a href="/answers/new"><input type="button" value="Reply" id="reply-button"></a>
+            <button type='button' id='like-button'> Like </button>
+            <td id="likes">
+            </td>
+          </tr>
+          <br>
+          <% end %>
+        </table>
+
       </div>
     </div>
+
+    <div class="col-sm-6">
+      <h3 class="text-center"><img id="safari-logo" src="/images/safari.png" height="46" width="46"> Next Trails</h3>
+      <img src="/images/Alkala.jpg" height="200" width="300" class="img-responsive center-block">
+
+      <aside class="text-center">
+        <table class="table"> 
+          <th>Ecce Homo's Trail </th>
+          <tr>
+            <td>Date: 18/7/2015 </td>
+            <td>Time: 10:30AM </td>
+            <td>Meeting point: Parking Los Cerros, Alcala de Henares (Madrid)</td>
+            <td><a href="http://www.wikiloc.com/wikiloc/view.do?id=2421067">Go to Map</a></td>
+          </tr>
+        </ul>
+      </table>
+    </div>
   </div>
+
+  <div id="pager-edit">
+    <ul class="pager">
+      <li><a href="/posts">All posts</a></li> 
+    </ul>
+  </div>
+</div>
 
 <div class="text-center">
   <div class="fb-comments" data-href="http://localhost:3000/home" data-numposts="5"></div>

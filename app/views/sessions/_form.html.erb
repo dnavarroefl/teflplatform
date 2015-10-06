@@ -1,5 +1,5 @@
 <div class="text-center">
-  <div id="session-form">
+  <div class="form-group">
     <%= form_tag sessions_path, :method => :post do %>
     <div class="field">
       <%= label_tag :email %>
@@ -13,7 +13,7 @@
       <%= check_box_tag :remember_me, 1, params[:remember_me] %>
       <%= label_tag :remember_me %>
     </div>
-
+    
     <p> If you haven't got an account yet, please
       <%= link_to "Sign up", signup_path %></p><br>
       <div class="actions"><%= submit_tag "Log in" %></div>

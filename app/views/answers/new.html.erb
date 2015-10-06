@@ -1,6 +1,6 @@
-<h1 id="students-wall"> Reply your classmate/teacher</h1>
+<h2 class="text-center"> Reply your classmate/teacher</h2><br>
 
-<hr>
+<div class="text-center">
 
 <%= form_for :answer, url: answers_path do |f| %>
 
@@ -23,6 +23,8 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+</div>
 
 <ul class="pager">
   <li><a href="/answers">Back</a></li>
