@@ -1,3 +1,5 @@
+/* Por cada acierto sumamos 1punto, por cada error restamos 1 y se muestra como output en SCORE*/
+
 $(document).ready(function(){
 
 	$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
@@ -8,16 +10,8 @@ $(document).ready(function(){
 		$('#output').html(function(i, val) { return val*1-1});
 	});
 
-/* Alerta de errores o aciertos por pantalla
+/*Eventos para marcar los aciertos y los errores en el juego*/
 
-		$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
-			alert('Correct!');
-		});
-
-		$('td#doWrong1, td#doWrong2').on('click', function() {
-			alert('Wrong!');	
-		});
-*/
 $('td#doRight1').on('click', function() {
 	$('td#doRight1').css('background-color', 'rgb(73,203,214)');
 });
@@ -63,7 +57,17 @@ $('td#doWrong2').on('click', function() {
 });
 });
 
-/* Juego de asociación de palabras planteado a modo de trivial
+/* Alerta de aciertos o errores por pantalla
+
+		$('td#doRight1, td#doRight2, td#doRight3, td#doRight4, td#doRight5, td#doRight6, td#doRight7, td#doRight8, td#doRight9').on('click', function() {
+			alert('Correct!');
+		});
+
+		$('td#doWrong1, td#doWrong2').on('click', function() {
+			alert('Wrong!');	
+		});
+
+Juego de asociación de palabras planteado a modo de trivial
 
 	var user = {}
 	var responses = [] 

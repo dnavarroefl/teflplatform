@@ -1,10 +1,6 @@
-<h3 id="signup-title"> Please, sign up </h3><br>
+<h3 class="text-center"> Please, sign up </h3><br>
 
-<div class ="container">
-    <div class="login-img">
-      <img src="/images/top-img.jpg" width:"1200" height:"600" class="img-responsive" alt="Responsive image">
-</div>
-
+<div class="text-center">
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -30,4 +26,5 @@
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+</div>
 

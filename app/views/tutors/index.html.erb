@@ -1,102 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div class="text-center">
 
-<div id="tutors-header">
-	
-	<h1 id="tutors-title"><img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46"> Your team info & activity at a glance </h1>
-</div>
+		<h1 id="tutors-title">
+			<img id="teachers" src="http://icons.iconarchive.com/icons/martz90/hex/256/bookmark-icon.png" height="46" width="46"> Your team info & activity at a glance 
+		</h1>
+	</div>
 
-<hr>
+	<hr>
 
-<div class="container">
-	<div class="row">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8">
+				<div id="home-header">
+					<h3>Students</h3>
+				</div>
+				<div id="students-titles">
+					<table class="table"> 
+						<tr>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Level</th>
+						</tr>
+					</div>
+				</div>
+
+				<div id="students-content">
+					<% @students.each do |student| %> 
+					<tr>
+						<td><%= student.name %></td>
+						<td><%= student.age %></td>
+						<td><%= student.level %></td>
+						<td><%= link_to 'Edit Student', edit_student_path(student) %></td>
+					</tr>
+					<% end %>
+				</table><br>
+			</div>
+		</div>
 
 		<div class="col-md-8">
 			<div id="home-header">
-				<h3>Students</h3>
+				<h3>Feedback</h3>
 			</div>
-				<div id="students-titles">
-				<table> 
+			<div id="comments-titles">
+				<table class="table"> 
 					<tr>
 						<th>Name</th>
-				    	<th>Age</th>
-						<th>Level</th>
+						<th>Title</th>
+						<th>Text</th>
+						<th>Created at</th>
 					</tr>
 				</div>
-			</div>
 
-				<div id="students-content">
-						<% @students.each do |student| %> 
-						<tr>
-							<td><%= student.name %></td>
-					    	<td><%= student.age %></td>
-							<td><%= student.level %></td>
-							<td><%= link_to 'Edit Student', edit_student_path(student) %></td>
-						</tr>
-						<% end %>
-					</table><br>
-				</div>
+				<div id="comments-content">
+					<% @comments.each do |comment| %> 
+					<tr>
+						<td><%= comment.name %></td>
+						<td><%= comment.title %></td>
+						<td><%= comment.text %></td>
+						<td><%= comment.created_at %></td>
+					</tr>
+
+					<% end %>
+
+				</table><br>
 			</div>
-			
+		</div>
+
 		<div class="col-md-8">
-					<div id="home-header">
-						<h3>Feedback</h3>
-					</div>
-						<div id="comments-titles">
-						<table> 
-							<tr>
-						    <th>Name</th>
-								<th>Title</th>
-								<th>Text</th>
-								<th>Created at</th>
-							</tr>
-						</div>
-
-						<div id="comments-content">
-							<% @comments.each do |comment| %> 
-							<tr>
-						    <td><%= comment.name %></td>
-								<td><%= comment.title %></td>
-								<td><%= comment.text %></td>
-								<td><%= comment.created_at %></td>
-							</tr>
-
-							<% end %>
-							
-						</table><br>
-					</div>
+			<div id="home-header">
+				<h3>Posts</h3>
+			</div>
+			<div id="posts-titles">
+				<table class="table"> 
+					<tr>
+						<th>Name</th>
+						<th>Title</th>
+						<th>Text</th>
+						<th>Created at </th>
+					</tr>
 				</div>
 
-<div class="col-md-8">
-					<div id="home-header">
-					<h3>Posts</h3>
-					</div>
-					<div id="posts-titles">
-					<table> 
-						<tr>
-					    	<th>Name</th>
-							<th>Title</th>
-							<th>Text</th>
-							<th>Created at </th>
-						</tr>
-					</div>
+				<div id="posts-content">
+					<% @posts.each do |post| %> 
+					<tr>
+						<td><%= post.name %></td>
+						<td><%= post.title %></td>
+						<td><%= post.text %></td>
+						<td><%= post.created_at %></td>
+					</tr>
 
-					<div id="posts-content">
-						<% @posts.each do |post| %> 
-						<tr>
-					    	<td><%= post.name %></td>
-							<td><%= post.title %></td>
-							<td><%= post.text %></td>
-							<td><%= post.created_at %></td>
-						</tr>
-
-						<% end %>
-					</table><br>
-				</div>
+					<% end %>
+				</table><br>
+			</div>
 		</div>
 	</div>
 </div>
 
 <div id="pager-edit">
 	<ul class="pager">
-	      <li><a href="/tutors">Back</a></li> 
-	 </ul>
+		<li><a href="/tutors">Back</a></li> 
+	</ul>
 </div>
+
+</body>
+</html>

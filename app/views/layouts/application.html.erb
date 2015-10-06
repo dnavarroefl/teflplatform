@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=640px" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <title>Tefl Hiking</title>
 
+  <!--He optado por usar las clases predefinidas de Bootstrap para el diseño responsive-->
   <!--<link href="assets/stylesheets/home.css" rel="stylesheet" type"text/css" >-->
   <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script> 
-  <script type="text/javascript" src="/assets/games.js"></script>   
+  
   
   <%= stylesheet_link_tag 'application' => true, media: 'all' %>
   <%= javascript_include_tag 'application'=> true %>
@@ -24,41 +24,24 @@
 
   <nav class="navbar navbar-default" role="navigation">
     <div class="nav_container">
-      <div class="sb-toggle-left"></div>
-      <ul>
-        <a class="navbar-brand" href="/home">
-          <img id="tefl-logo" alt="TEFL" width="36" height="36" src="/images/tefl_logo.jpg">
-        </a>
-      </ul>
-
-      <span id="log_container">  
-        <% if current_user %> 
-        Logged in as <%= current_user.email %><br>
-        <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
-        <%= link_to "Log out", :logout, method: :post %>
-        <% else %>
-        <%= link_to "Sign up", signup_path %>
-        or
-        <%= link_to "Log in", login_path %>
-      </span>
-      <% end %>   
-      <% flash.each do |name, msg| %> 
-      <%= content_tag :div, msg, :id => "flash#name" %>
-      <% end %>
-    </span>
-
+      <div class="navbar-header">
+        <ul>
+          <a class="navbar-brand" href="/home">
+            <img class="img-thumbnail" alt="TEFL" width="36" height="36" src="/images/tefl_logo.jpg">
+          </a>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <ul class="nav nav-pills pull-right">
+    <ul class="nav nav-bar nav-pills pull-right">
+    </li>
+
+    <li role="presentation"> <span id="home-link">
+    </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/home">HOME</a>
   </li>
 
-  <li role="presentation"> <span id="home-link">
-  </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/home">HOME</a>
-</li>
-
-<li role="presentation"> <span id="teachers-link">
-</span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/teachers">TEACHERS</a>
+  <li role="presentation"> <span id="teachers-link">
+  </span><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="/teachers">TEACHERS</a>
 </li>
 
 <li role="presentation"><span id="student-link">
@@ -88,14 +71,37 @@
 </div>
 </nav>
 
+<div class="navbar navbar-default" role="navigation">
+  <span id="log_container">  
+    <% if current_user %> 
+    Logged in as <%= current_user.email %><br>
+    <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
+    <%= link_to "Log out", :logout, method: :post %>
+    <% else %>
+    <%= link_to "Sign up", signup_path %>
+    or
+    <%= link_to "Log in", login_path %>
+  </span>
+  <% end %>   
+  <% flash.each do |name, msg| %> 
+  <%= content_tag :div, msg, :id => "flash#name" %>
+  <% end %>
+</span>
+</nav>
+
 <%= yield %>
 </body>
 
+<hr>
+
 <footer>
   <div class="container">
-      <span class="wrap"> TEFL, ® 2015
-      </span>
+    <span class="wrap">
+      <p class="text-center"> TEFL, ® 2015
+      </p>
+    </span>
   </div>
 </footer>
+
 
 </html>
