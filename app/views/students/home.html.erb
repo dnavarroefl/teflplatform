@@ -1,15 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  </script>
+  
 </head>
 
 <body>
@@ -29,7 +21,7 @@
 
            <% @posts.each do |post| %> 
 
-           <th><h4 id="post-title"><%= post.title %><h4></th>
+           <th><h4 class="text-justify"><%= post.title %><h4></th>
            <tr>
             <td>By: <b><%= post.name %></b></td>
           </tr>
@@ -86,6 +78,16 @@
 
 <script type="text/javascript" src="assets/posts">
 </script>
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 </html>
 

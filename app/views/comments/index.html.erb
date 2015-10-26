@@ -1,41 +1,27 @@
-<h1 id="students-wall"> Comments </h1>
+<h1 class="text-center"> Comments </h1>
 
 <hr>
 
-<div id="comments_home">
-									<h3 id="latest_feedback">Latest comments</h3>
-										<% @comments.each do |comment| %> 
-										<table id="table_comments">
-												<tr>
-													<th>Title</th>
-													<th>Name</th>
-													<th>Text</th>
-												</tr>
+<div class="text-left">
+	<h3 class="text-center">Latest comments</h3>
+	<% @comments.each do |comment| %> 
+	<table class="table">
+		<tr>
+			<th>Title</th>
+			<th>Name</th>
+			<th>Text</th>
+		</tr>
 
-												<div id="comments-content">
-														<tr>
-															<td><%= comment.title %></td> 
-															<td><%= comment.name %></td>
-															<td><%= comment.text %></td>
-															<td><%= comment.created_at %></td>
-															
-															<td><button type='button' id='like-button'> Like </button></td>
-															<td id="likes"></td>
-														</tr>
-													</div>
-												</table>
-												
-											<% end %>
-							</div>
-					</div>
+		<div class="table">
+			<tr>
+				<td><%= comment.title %></td> 
+				<td><%= comment.name %></td>
+				<td><%= comment.text %></td>
+				<td><%= comment.created_at %></td>
+			</tr>
+		</div>
+	</table>
 
-<script type="text/javascript" src="/assets/posts.js"></script>
-
-<!--* Contador de likes para cada comentario y post
-
-	$('button#like-button').on('click', function() {
-	    $('#likes').html(function(i, val) { return val*1+1 });
-	});
--->
-
-</script>
+	<% end %>
+</div>
+</div>
