@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title></title>
 </head>
-
 <body>
-	
-	<span class="text-center">
-		<h2 id="student-title"><img id="student-header" src="/images/students.png" height="46" width="46"> Your Team </h2>
-	</span>
-
-	<hr>
-
-	<div class="container">
-		<% @students.each do |student| %>
-		<table class="table">
-			<tr>
-				<th><b><%= student.name %></b></th>
-				<td><b>Email:</b> <%= student.email %></td>
-				<td><b>Age:</b> <%= student.age %></td>
-				<td><b>Level:</b> <%= student.level %></td>
-		<!-- Otras características que pueden ser añadidas desde el backend
-			<td>Progress: <%= student.progress %></td>
-			<td>Score: <%= student.score %></td>
-			<td>Comment: <%= student.comment %></td>
-		-->
-		<% end %> 
-	</tr>
-</table>
-</div>
-
-<div id="pager-edit">
-	<ul class="pager">
-		<li><a href="/home">Back</a></li> 
-	</ul>
-
+  <span class="text-center"></span>
+  <h2 id="student-title"><span class="text-center"><img height="46" id=
+  "student-header" src="/images/students.png" width="46"> Your Team</span></h2>
+  <hr>
+  <div class="container">
+    <%@students.each do |s| %>
+    <table class="table">
+      <tr>
+        <th><b><%= student.name %></b></th>
+        <td><b>Email:</b> <%= student.email %></td>
+        <td><b>Age:</b> <%= student.age %></td>
+        <td><b>Level:</b> <%= student.level %></td>
+        <!-- Otras características que pueden ser añadidas desde el backend
+            <td>Progress: <%= student.progress %></td>
+            <td>Score: <%= student.score %></td>
+            <td>Comment: <%= student.comment %></td>
+        -->
+        <%end %>
+      </tr>
+    </table>
+  </div>
+  <div id="pager-edit">
+    <ul class="pager">
+      <li>
+        <a href="/home">Back</a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
-
 
 
